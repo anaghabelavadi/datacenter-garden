@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building Explorer · Data Center Digital Garden</title>
+<meta name="description" content="Click any part of a data center to see what it affects, then follow it into the garden.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* Palette borrows the utility-marking colors used on streets:
+     red = electric power, blue = water, orange = communications. */
+  :root {
+    --bg: #e7e9e4;
+    --sheet: #f4f5f2;
+    --ink: #24282b;
+    --pencil: #687076;
+    --rule: #c9ccc6;
+    --ground: #cdc4b0;
+    --strata-1: #b9ad94;
+    --strata-2: #a39780;
+    --strata-3: #8e836e;
+    --power: #c8261b;
+    --water: #1d5fa8;
+    --data: #e0701a;
+    --mark: #f2c230;
+    --sky: #eef0ec;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #1b1f22;
+      --sheet: #22272b;
+      --ink: #e4e6e2;
+      --pencil: #9aa1a6;
+      --rule: #3a4045;
+      --ground: #4a4436;
+      --strata-1: #3f3a2f;
+      --strata-2: #36322a;
+      --strata-3: #2e2b25;
+      --power: #f0584c;
+      --water: #5b95dc;
+      --data: #f2964a;
+      --mark: #e8b923;
+      --sky: #22272b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 400 17px/1.55 "Barlow", system-ui, sans-serif;
+  }
+  a { color: inherit; }
+  :focus-visible { outline: 3px solid var(--mark); outline-offset: 2px; }
+
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 24px 16px 48px; }
+  header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; margin-bottom: 16px; }
+  h1 {
+    font: 700 clamp(30px, 4.2vw, 48px)/1.02 "Barlow Semi Condensed", sans-serif;
+    letter-spacing: -0.01em;
+    margin: 0;
+    max-width: 18ch;
+  }
+  .back { font-weight: 500; color: var(--pencil); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .back:hover { color: var(--ink); }
+  .lede { color: var(--pencil); max-width: 62ch; margin: 8px 0 0; }
+
+  .board { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 16px; align-items: start; }
+  @media (max-width: 900px) { .board { grid-template-columns: 1fr; } }
+
+  .drawing { background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px; padding: 8px; }
+  svg { display: block; width: 100%; height: auto; }
+
+  /* Parts of the drawing */
+  .part { cursor: pointer; }
+  .part .hit { fill: transparent; }
+  .part:hover .line, .part:focus-visible .line { stroke-width: 2.4; }
+  .part:focus, .part:focus-visible { outline: none; }
+  .part:focus-visible .hit, .part:hover .hit { fill: var(--mark); fill-opacity: .18; }
+  .part.is-selected .hit { fill: var(--mark); fill-opacity: .38; }
+  .line { stroke: var(--ink); stroke-width: 1.4; fill: none; vector-effect: non-scaling-stroke; }
+  .fillink { fill: var(--ink); }
+  .fillsheet { fill: var(--sheet); }
+  .quiet { stroke: var(--pencil); }
+  .lbl { font: 500 13px "Barlow", sans-serif; fill: var(--pencil); pointer-events: none; }
+  .utility { fill: none; stroke-width: 3; stroke-dasharray: 10 6; }
+  .u-power { stroke: var(--power); }
+  .u-water { stroke: var(--water); }
+  .u-data { stroke: var(--data); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 20px; padding: 8px 8px 4px; font-size: 14px; color: var(--pencil); }
+  .legend span { display: inline-flex; align-items: center; gap: 8px; }
+  .legend i { display: inline-block; width: 28px; height: 0; border-top: 3px dashed; }
+
+  .parts { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .parts button {
+    font: 500 14px "Barlow", sans-serif;
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 4px 12px;
+    cursor: pointer;
+  }
+  .parts button[aria-pressed="true"] { background: var(--mark); border-color: var(--mark); color: #24282b; }
+
+  /* Panel reads like a tag tied to the part */
+  .panel {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-left: 6px solid var(--mark);
+    border-radius: 4px;
+    padding: 20px 20px 24px;
+    position: sticky;
+    top: 16px;
+  }
+  .panel h2 { font: 700 30px/1.05 "Barlow Semi Condensed", sans-serif; margin: 0 0 4px; }
+  .level { color: var(--pencil); font-size: 15px; margin: 0 0 12px; }
+  .meter { display: flex; gap: 4px; margin: 0 0 16px; }
+  .meter b { flex: 1; height: 6px; border-radius: 2px; background: var(--rule); }
+  .meter b.on { background: var(--ink); }
+  .panel p.desc { margin: 0 0 16px; }
+  .panel h3 { font: 600 17px "Barlow Semi Condensed", sans-serif; margin: 0 0 6px; }
+  .impacts { list-style: none; padding: 0; margin: 0 0 20px; border-top: 1px solid var(--rule); }
+  .impacts li { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 8px 0; border-bottom: 1px solid var(--rule); }
+  .impacts strong { font-weight: 600; }
+  .impacts .branch { color: var(--pencil); font-size: 14px; text-decoration: none; border-bottom: 1px dotted var(--pencil); align-self: start; white-space: nowrap; }
+  .impacts .what { grid-column: 1 / -1; color: var(--pencil); font-size: 15px; }
+  .open {
+    display: inline-block;
+    font: 600 16px "Barlow", sans-serif;
+    color: #f4f5f2;
+    background: var(--ink);
+    padding: 10px 16px;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+  @media (prefers-color-scheme: dark) { .open { color: #1b1f22; } }
+  .empty p { color: var(--pencil); margin: 0; }
+  footer { margin-top: 24px; color: var(--pencil); font-size: 14px; max-width: 72ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Take the building apart</h1>
+      <p class="lede">Every part of a data center pulls on something outside it: a grid, a river, a mine, a neighborhood. Click a part to see what it affects, then follow it into the garden.</p>
+    </div>
+    <a class="back" href="../index">Back to the garden</a>
+  </header>
+
+  <div class="board">
+    <section class="drawing" aria-label="Section drawing of a data center">
+      <svg viewBox="0 0 1000 640" role="group" aria-label="Cutaway of a data center site, from power lines and cooling above ground to minerals and waste below">
+        <!-- sky -->
+        <rect x="0" y="0" width="1000" height="430" fill="var(--sky)"/>
+
+        <!-- MATERIALS AND MINERALS: strata below ground (left) -->
+        <g class="part" data-id="materials-and-minerals" tabindex="0" role="button" aria-label="Materials and minerals">
+          <rect class="hit" x="0" y="470" width="600" height="170"/>
+          <path d="M0 470 H600 V640 H0Z" fill="var(--strata-1)"/>
+          <path d="M0 520 C120 505 260 540 380 520 S560 510 600 525 V640 H0Z" fill="var(--strata-2)"/>
+          <path d="M0 580 C140 570 240 600 400 585 S540 575 600 590 V640 H0Z" fill="var(--strata-3)"/>
+          <g class="fillink" opacity=".55">
+            <circle cx="70" cy="545" r="5"/><circle cx="96" cy="556" r="3"/><circle cx="210" cy="600" r="6"/>
+            <circle cx="320" cy="545" r="4"/><circle cx="470" cy="610" r="5"/><circle cx="530" cy="552" r="3"/>
+          </g>
+          <!-- small open-pit mine -->
+          <path class="line" d="M120 470 L150 500 L230 500 L260 470"/>
+          <path class="line quiet" d="M140 488 H240"/>
+          <text class="lbl" x="300" y="500">copper, gallium, cobalt, rare earths</text>
+        </g>
+
+        <!-- END OF LIFE: below ground (right) -->
+        <g class="part" data-id="end-of-life" tabindex="0" role="button" aria-label="End of life">
+          <rect class="hit" x="600" y="470" width="400" height="170"/>
+          <rect x="600" y="470" width="400" height="170" fill="var(--strata-1)"/>
+          <path d="M600 535 C700 525 820 548 1000 530 V640 H600Z" fill="var(--strata-2)"/>
+          <!-- retired servers in a pile -->
+          <g class="line">
+            <rect x="660" y="575" width="70" height="14" transform="rotate(-8 695 582)"/>
+            <rect x="700" y="590" width="70" height="14" transform="rotate(6 735 597)"/>
+            <rect x="740" y="572" width="70" height="14" transform="rotate(-3 775 579)"/>
+            <rect x="690" y="606" width="70" height="14"/>
+          </g>
+          <!-- recovery loop -->
+          <path class="line" d="M860 600 a28 28 0 1 1 30 -12"/>
+          <path class="fillink" d="M886 596 l10 -12 l2 14z"/>
+          <text class="lbl" x="660" y="500">retired hardware</text>
+        </g>
+
+        <!-- SITE AND LAND: topsoil band, trees, fence -->
+        <g class="part" data-id="site-and-land" tabindex="0" role="button" aria-label="Site and land">
+          <rect class="hit" x="0" y="400" width="1000" height="70"/>
+          <rect x="0" y="430" width="1000" height="40" fill="var(--ground)"/>
+          <path class="line" d="M0 430 H1000"/>
+          <g class="line">
+            <path d="M40 430 V400"/><circle cx="40" cy="390" r="14"/>
+            <path d="M80 430 V408"/><circle cx="80" cy="398" r="11"/>
+            <path d="M905 430 V404"/><circle cx="905" cy="393" r="13"/>
+          </g>
+          <!-- fence -->
+          <g class="line quiet"><path d="M110 430 V414 M126 430 V414 M142 430 V414 M110 418 H142"/><path d="M860 430 V414 M876 430 V414 M860 418 H876"/></g>
+        </g>
+
+        <!-- POWER SUPPLY: transmission tower, substation, generator, UPS room -->
+        <g class="part" data-id="power-supply" tabindex="0" role="button" aria-label="Power supply">
+          <rect class="hit" x="0" y="150" width="300" height="280"/>
+          <rect class="hit" x="306" y="330" width="104" height="96"/>
+          <!-- tower -->
+          <path class="line" d="M30 430 L52 170 L74 430 M38 330 H66 M44 250 H60 M30 430 L66 330 M74 430 L38 330 M40 210 H64"/>
+          <!-- transformers -->
+          <rect class="line" x="160" y="370" width="44" height="60"/><path class="line" d="M166 370 V356 M182 370 V352 M198 370 V356"/>
+          <rect class="line" x="214" y="384" width="36" height="46"/>
+          <!-- backup generator with stack -->
+          <rect class="line" x="100" y="392" width="48" height="38"/><path class="line" d="M140 392 V362 H148 V392"/>
+          <text class="lbl" x="84" y="356">generator</text>
+          <!-- UPS + batteries inside building -->
+          <g class="line"><rect x="318" y="350" width="22" height="70"/><rect x="346" y="350" width="22" height="70"/><rect x="374" y="350" width="22" height="70"/></g>
+          <text class="lbl" x="318" y="342">UPS</text>
+          <text class="lbl" x="162" y="344">substation</text>
+        </g>
+
+        <!-- BUILDING SHELL -->
+        <g class="part" data-id="building-shell" tabindex="0" role="button" aria-label="Building shell">
+          <path class="hit" d="M300 210 H830 V445 H300Z M310 222 V426 H820 V222Z" fill-rule="evenodd"/>
+          <path class="line" d="M300 430 V210 H830 V430"/>
+          <path class="line" d="M310 430 V222 H820 V430"/>
+          <rect x="292" y="430" width="546" height="14" class="line"/>
+          <path class="line quiet" d="M300 444 V460 M380 444 V460 M460 444 V460 M540 444 V460 M620 444 V460 M700 444 V460 M780 444 V460 M830 444 V460"/>
+          <path class="line" d="M412 430 V222"/>
+        </g>
+
+        <!-- COOLING: rooftop units + water riser -->
+        <g class="part" data-id="cooling" tabindex="0" role="button" aria-label="Cooling">
+          <rect class="hit" x="540" y="150" width="280" height="60"/>
+          <rect class="hit" x="826" y="200" width="30" height="270"/>
+          <g class="line">
+            <rect x="560" y="176" width="72" height="34"/><circle cx="582" cy="176" r="9"/><circle cx="610" cy="176" r="9"/>
+            <rect x="648" y="176" width="72" height="34"/><circle cx="670" cy="176" r="9"/><circle cx="698" cy="176" r="9"/>
+            <path d="M736 210 V170 L752 158 H792 L808 170 V210Z"/>
+          </g>
+          <path class="line quiet" d="M770 150 q6 -10 0 -18 M786 150 q6 -10 0 -18"/>
+          <text class="lbl" x="560" y="160">chillers, cooling tower</text>
+        </g>
+
+        <!-- WHITE SPACE: data hall racks -->
+        <g class="part" data-id="white-space" tabindex="0" role="button" aria-label="Data hall and racks">
+          <rect class="hit" x="420" y="240" width="392" height="186"/>
+          <g class="line">
+            <rect x="476" y="292" width="36" height="134"/>
+            <rect x="524" y="292" width="36" height="134"/>
+            <rect x="572" y="292" width="36" height="134"/>
+            <rect x="676" y="292" width="36" height="134"/>
+            <rect x="724" y="292" width="36" height="134"/>
+          </g>
+          <path class="line quiet" d="M420 272 H812"/>
+          <text class="lbl" x="476" y="262">data hall</text>
+        </g>
+
+        <!-- NETWORK: one rack + fiber conduit -->
+        <g class="part" data-id="network" tabindex="0" role="button" aria-label="Network">
+          <rect class="hit" x="424" y="292" width="44" height="134"/>
+          <rect class="line" x="428" y="292" width="36" height="134"/>
+          <g class="line quiet"><path d="M434 306 H458 M434 316 H458 M434 326 H458 M434 336 H458"/></g>
+        </g>
+
+        <!-- SERVERS: the highlighted rack, with one tray pulled out -->
+        <g class="part" data-id="servers" tabindex="0" role="button" aria-label="Servers">
+          <rect class="hit" x="620" y="288" width="52" height="140"/>
+          <rect class="line" x="624" y="292" width="36" height="134"/>
+          <g class="line quiet"><path d="M624 310 H660 M624 328 H660 M624 346 H660 M624 382 H660 M624 400 H660"/></g>
+          <!-- pulled-out tray -->
+          <rect class="line fillsheet" x="616" y="356" width="56" height="16"/>
+          <!-- leader to lens -->
+          <path class="line quiet" d="M672 362 L880 120" stroke-dasharray="3 4"/>
+          <!-- lens body: the server board -->
+          <circle class="hit" cx="900" cy="96" r="78"/>
+          <circle class="line fillsheet" cx="900" cy="96" r="78"/>
+          <rect class="line" x="846" y="66" width="108" height="64" rx="2"/>
+          <g class="line quiet"><rect x="856" y="76" width="10" height="44"/><rect x="870" y="76" width="10" height="44"/><path d="M932 74 h14 v10 h-14z M932 110 h14 v10 h-14z"/></g>
+          <text class="lbl" x="812" y="40" text-anchor="end">one server, magnified</text>
+        </g>
+
+        <!-- CHIPS AND BOARDS: the processor on the board in the lens -->
+        <g class="part" data-id="chips-and-boards" tabindex="0" role="button" aria-label="Chips and boards">
+          <rect class="hit" x="886" y="78" width="40" height="40"/>
+          <rect class="line" x="894" y="86" width="24" height="24"/>
+          <rect class="fillink" x="900" y="92" width="12" height="12"/>
+          <path class="line quiet" d="M894 92 h-6 M894 98 h-6 M894 104 h-6 M918 92 h6 M918 98 h6 M918 104 h6 M900 86 v-6 M906 86 v-6 M912 86 v-6"/>
+        </g>
+
+        <!-- Utility lines: drawn last so they read on top, but don't capture clicks -->
+        <g pointer-events="none">
+          <path class="utility u-power" d="M52 172 C120 200 200 300 182 352 M204 400 H318"/>
+          <path class="utility u-water" d="M1000 456 H842 V196 H808"/>
+          <path class="utility u-data" d="M1000 462 H860 V452 H446 V426"/>
+        </g>
+      </svg>
+
+      <div class="legend" aria-label="Line colors">
+        <span><i style="color:var(--power)"></i>Electric power</span>
+        <span><i style="color:var(--water)"></i>Water</span>
+        <span><i style="color:var(--data)"></i>Fiber and data</span>
+      </div>
+
+      <ul class="parts" id="parts" aria-label="All parts, from the whole site down to its materials"></ul>
+    </section>
+
+    <aside class="panel" id="panel" aria-live="polite">
+      <div class="empty">
+        <h2>Pick a part</h2>
+        <p>Start anywhere: the power lines, the roof, a single rack, or the ground underneath. Each part shows what it affects and links to its note in the garden.</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    This page is a seedling. The part descriptions mirror the notes in <code>content/components/</code>; when a note changes, update the matching entry in this page's <code>PARTS</code> list (or help us generate it from the notes).
+  </footer>
+</div>
+
+<script>
+const BRANCHES = {
+  "engineering": "Engineering",
+  "architecture-and-construction": "Architecture & Construction",
+  "economics": "Economics",
+  "environment": "Environment",
+  "communities": "Communities",
+  "data-operations": "Data Operations",
+  "policy": "Policy",
+  "security": "Security"
+};
+
+// Ordered by zoom level, from the whole site down to its materials.
+const PARTS = [
+  { id: "site-and-land", name: "Site and land", level: 1,
+    desc: "The plot and everything its location decides: grid, water, climate, neighbors and rules.",
+    impacts: [
+      ["Land use", "Converts land, often farmland or forest, to industrial use", "environment"],
+      ["Housing values and local character", "Neighbors raise concerns about property values and green space", "communities"],
+      ["Climate hazards", "Heat, drought or flood risk affects reliability", "security"],
+      ["Siting rules", "Zoning and county approvals decide what gets built where", "policy"] ] },
+  { id: "power-supply", name: "Power supply", level: 2,
+    desc: "Everything between the grid and the server plug: substation, transformers, UPS, batteries and backup generators.",
+    impacts: [
+      ["Operational electricity", "Most of the facility's footprint runs through this path", "engineering"],
+      ["Grid carbon", "Emissions depend on the regional grid mix", "environment"],
+      ["Indirect water", "Power plants use water; much of a data center's water footprint is indirect", "environment"],
+      ["Air pollution and noise", "Backup generators are tested and emit on site", "communities"],
+      ["Energy bills", "Grid upgrades for large loads can affect local rates", "communities"] ] },
+  { id: "building-shell", name: "Building shell", level: 2,
+    desc: "Foundations, walls, roof and fit-out: the structure that holds everything.",
+    impacts: [
+      ["Embodied carbon", "Concrete and steel carry emissions before any server switches on", "engineering"],
+      ["Aesthetics and scale", "Large windowless boxes shape how a place looks", "architecture-and-construction"],
+      ["Heat reuse potential", "Design decides whether waste heat can serve neighbors", "architecture-and-construction"] ] },
+  { id: "cooling", name: "Cooling", level: 2,
+    desc: "Moves heat from chips to the outside: chillers, cooling towers, air handlers and liquid loops.",
+    impacts: [
+      ["Direct water use", "Evaporative cooling consumes water on site", "environment"],
+      ["Electricity overhead", "Cooling is a large part of the gap between total and IT power", "engineering"],
+      ["Water depletion concerns", "A common reason for local opposition", "communities"] ] },
+  { id: "white-space", name: "Data hall and racks", level: 3,
+    desc: "The rows of racks, aisles, power distribution and cabling where IT equipment lives.",
+    impacts: [
+      ["Power density", "AI racks draw far more power each, reshaping cooling and power design", "engineering"],
+      ["Materials", "Steel racks, copper and fiber cabling", "engineering"] ] },
+  { id: "servers", name: "Servers", level: 4,
+    desc: "The computers themselves, and how long they stay in service before replacement.",
+    impacts: [
+      ["Operational energy", "Most IT electricity is drawn by servers", "data-operations"],
+      ["Embodied carbon", "Manufacturing grows in share as grids get cleaner", "engineering"],
+      ["Refresh decisions", "Replacing sooner saves energy per task but adds embodied carbon and e-waste", "engineering"] ] },
+  { id: "network", name: "Network", level: 4,
+    desc: "Switches, routers and fiber connecting servers to each other and to the world.",
+    impacts: [
+      ["Operational energy", "A smaller but steady share of IT power", "data-operations"],
+      ["Cybersecurity surface", "Network design shapes exposure to attacks", "security"] ] },
+  { id: "chips-and-boards", name: "Chips and boards", level: 5,
+    desc: "GPUs, CPUs, memory and circuit boards: the most manufacturing-intensive parts of the building.",
+    impacts: [
+      ["Fab emissions and water", "Chipmaking uses energy, ultrapure water and process gases", "environment"],
+      ["Supply concentration", "Advanced chip supply sits in a few places", "security"],
+      ["Efficiency gains", "Each generation does more per watt, which feeds demand", "economics"] ] },
+  { id: "materials-and-minerals", name: "Materials and minerals", level: 6,
+    desc: "What the hardware and building are made of, and where those materials come from.",
+    impacts: [
+      ["Mining impacts", "Extraction affects land, water and communities far away", "environment"],
+      ["Critical mineral demand", "AI hardware raises demand for minerals with concentrated supply", "security"],
+      ["Material stocks", "The building and fleet hold materials that could be recovered", "engineering"] ] },
+  { id: "end-of-life", name: "End of life", level: 6,
+    desc: "What happens to servers, batteries and the building when they are retired.",
+    impacts: [
+      ["E-waste", "Retired hardware becomes waste unless reused or recycled", "environment"],
+      ["Material recovery", "Recovering metals offsets primary mining", "engineering"],
+      ["Data security", "Drive destruction policies can limit reuse", "security"] ] }
+];
+const MAX_LEVEL = 6;
+
+const panel = document.getElementById("panel");
+const list = document.getElementById("parts");
+const groups = [...document.querySelectorAll(".part")];
+
+function esc(s) { return s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+function select(id, fromHash) {
+  const p = PARTS.find(x => x.id === id);
+  if (!p) return;
+  groups.forEach(g => g.classList.toggle("is-selected", g.dataset.id === id));
+  list.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.id === id)));
+  const meter = Array.from({ length: MAX_LEVEL }, (_, i) => `<b class="${i < p.level ? "on" : ""}"></b>`).join("");
+  panel.innerHTML = `
+    <h2>${esc(p.name)}</h2>
+    <p class="level">Zoom level ${p.level} of ${MAX_LEVEL}</p>
+    <div class="meter" aria-hidden="true">${meter}</div>
+    <p class="desc">${esc(p.desc)}</p>
+    <h3>What it affects</h3>
+    <ul class="impacts">
+      ${p.impacts.map(([name, what, br]) => `
+        <li><strong>${esc(name)}</strong>
+          <a class="branch" href="../branches/${br}">${esc(BRANCHES[br])}</a>
+          <span class="what">${esc(what)}</span></li>`).join("")}
+    </ul>
+    <a class="open" href="../components/${p.id}">Open the ${esc(p.name.toLowerCase())} note</a>`;
+  if (!fromHash) history.replaceState(null, "", "#" + id);
+}
+
+PARTS.forEach(p => {
+  const li = document.createElement("li");
+  li.innerHTML = `<button type="button" data-id="${p.id}" aria-pressed="false">${esc(p.name)}</button>`;
+  li.firstChild.addEventListener("click", () => select(p.id));
+  list.appendChild(li);
+});
+
+groups.forEach(g => {
+  g.addEventListener("click", () => select(g.dataset.id));
+  g.addEventListener("keydown", e => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(g.dataset.id); }
+  });
+});
+
+if (location.hash) select(location.hash.slice(1), true);
+</script>
+</body>
+</html>
