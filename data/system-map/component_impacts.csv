@@ -1,0 +1,167 @@
+System,Component,Impact,Impact domain
+Site and building,Site works and land clearing,Farmland,Land and living systems
+Site and building,Site works and land clearing,Forest and green space,Land and living systems
+Site and building,Site works and land clearing,Wetlands and streams,Land and living systems
+Site and building,Site works and land clearing,Impervious surface,Land and living systems
+Site and building,Site works and land clearing,Sediment and runoff,Water
+Site and building,Site works and land clearing,Habitat extent and connectivity,Land and living systems
+Site and building,Site works and land clearing,Archaeological sites,Land and living systems
+Site and building,Site works and land clearing,Cemeteries,Land and living systems
+Site and building,Site works and land clearing,Road traffic,Sensory environment
+Site and building,Site works and land clearing,Duration of construction,Sensory environment
+Site and building,Site works and land clearing,Intermittent sound,Sensory environment
+Site and building,Site works and land clearing,Construction employment,Economy and public finance
+Site and building,Site works and land clearing,Embodied CO2,Atmosphere and climate
+Site and building,"Building shell (concrete, steel)",Embodied CO2,Atmosphere and climate
+Site and building,"Building shell (concrete, steel)",Visual character,Land and living systems
+Site and building,"Building shell (concrete, steel)",Historic landscapes and viewsheds,Land and living systems
+Site and building,"Building shell (concrete, steel)",Impervious surface,Land and living systems
+Site and building,"Building shell (concrete, steel)",Construction employment,Economy and public finance
+Site and building,"Building shell (concrete, steel)",Property values,Economy and public finance
+Site and building,"Building shell (concrete, steel)",Local tax revenue,Economy and public finance
+Site and building,"Building shell (concrete, steel)",Availability of skilled trades,Economy and public finance
+Site and building,"Perimeter, security and lighting",Night-time light,Sensory environment
+Site and building,"Perimeter, security and lighting",Birds and wildlife,Land and living systems
+Site and building,"Perimeter, security and lighting",Visual character,Land and living systems
+Site and building,"Perimeter, security and lighting",Public access to open space,Land and living systems
+Site and building,"Perimeter, security and lighting",Physical attack on facilities,Security
+Site and building,"Perimeter, security and lighting",Visibility of infrastructure and its labour,Power and knowledge
+Power,Grid interconnection and substation,Substation and distribution capacity,Electricity system
+Power,Grid interconnection and substation,Connection headroom for other users,Electricity system
+Power,Grid interconnection and substation,Peak load,Electricity system
+Power,Grid interconnection and substation,Availability of grid equipment,Electricity system
+Power,Grid interconnection and substation,Copper and aluminium,Materials and waste
+Power,Grid interconnection and substation,Land held for power lines and plants,Land and living systems
+Power,Grid interconnection and substation,Low-frequency sound,Sensory environment
+Power,Grid interconnection and substation,Interconnection queue,Siting and grid access
+Power,New transmission lines,Transmission capacity,Electricity system
+Power,New transmission lines,Land held for power lines and plants,Land and living systems
+Power,New transmission lines,Security of land tenure,Land and living systems
+Power,New transmission lines,Visual character,Land and living systems
+Power,New transmission lines,Birds and wildlife,Land and living systems
+Power,New transmission lines,Household electricity bills,Electricity system
+Power,New transmission lines,Share of grid costs carried by other customers,Electricity system
+Power,New transmission lines,Copper and aluminium,Materials and waste
+Power,New transmission lines,Historic landscapes and viewsheds,Land and living systems
+Power,Transformers and switchgear,Availability of grid equipment,Electricity system
+Power,Transformers and switchgear,Copper and aluminium,Materials and waste
+Power,Transformers and switchgear,Continuous sound level,Sensory environment
+Power,Transformers and switchgear,Low-frequency sound,Sensory environment
+Power,Transformers and switchgear,Fire risk,Health and safety
+Power,UPS and battery storage,Battery minerals,Materials and waste
+Power,UPS and battery storage,Fire risk,Health and safety
+Power,UPS and battery storage,Exposure to hazardous materials,Health and safety
+Power,UPS and battery storage,Hazardous waste,Materials and waste
+Power,UPS and battery storage,Frequency and voltage stability,Electricity system
+Power,UPS and battery storage,Flexibility available to grid operators,Electricity system
+Power,Backup diesel generators,Diesel stored and burned,Electricity system
+Power,Backup diesel generators,Nitrogen oxides,Atmosphere and climate
+Power,Backup diesel generators,Fine particulate matter,Atmosphere and climate
+Power,Backup diesel generators,Carbon monoxide,Atmosphere and climate
+Power,Backup diesel generators,Sulfur dioxide,Atmosphere and climate
+Power,Backup diesel generators,Intermittent sound,Sensory environment
+Power,Backup diesel generators,Low-frequency sound,Sensory environment
+Power,Backup diesel generators,Fuel and oil contamination,Water
+Power,Backup diesel generators,Fire risk,Health and safety
+Power,Backup diesel generators,Respiratory illness,Health and safety
+Power,Backup diesel generators,Distribution of exposure across places and groups,Health and safety
+Power,On-site gas turbines / fuel cells,Generation outside the public grid,Electricity system
+Power,On-site gas turbines / fuel cells,Natural gas demand,Electricity system
+Power,On-site gas turbines / fuel cells,Methane,Atmosphere and climate
+Power,On-site gas turbines / fuel cells,Operational CO2,Atmosphere and climate
+Power,On-site gas turbines / fuel cells,Nitrogen oxides,Atmosphere and climate
+Power,On-site gas turbines / fuel cells,Continuous sound level,Sensory environment
+Power,On-site gas turbines / fuel cells,Low-frequency sound,Sensory environment
+Power,On-site gas turbines / fuel cells,Clarity about who has authority,Power and knowledge
+Power,On-site gas turbines / fuel cells,Regional self-sufficiency in power,Security
+Power,On-site gas turbines / fuel cells,Stranded-cost exposure,Electricity system
+Power,On-site solar and storage,Renewable generation and storage,Electricity system
+Power,On-site solar and storage,Battery minerals,Materials and waste
+Power,On-site solar and storage,Land held for power lines and plants,Land and living systems
+Power,On-site solar and storage,Corporate climate targets,Atmosphere and climate
+IT equipment,GPU / accelerator servers,Electricity consumed,Electricity system
+IT equipment,GPU / accelerator servers,Peak load,Electricity system
+IT equipment,GPU / accelerator servers,Speed of load swings,Electricity system
+IT equipment,GPU / accelerator servers,Semiconductors and memory,Materials and waste
+IT equipment,GPU / accelerator servers,Gallium,Materials and waste
+IT equipment,GPU / accelerator servers,Embodied CO2,Atmosphere and climate
+IT equipment,GPU / accelerator servers,Water embedded in hardware,Water
+IT equipment,GPU / accelerator servers,Electronic waste,Materials and waste
+IT equipment,GPU / accelerator servers,Supplier concentration,Security
+IT equipment,GPU / accelerator servers,Openness of trade in minerals and equipment,Security
+IT equipment,GPU / accelerator servers,National compute capacity,Security
+IT equipment,GPU / accelerator servers,Local tax revenue,Economy and public finance
+IT equipment,GPU / accelerator servers,Hardware kept in use,Materials and waste
+IT equipment,GPU / accelerator servers,Capital investment,Economy and public finance
+IT equipment,GPU / accelerator servers,Debt and financial exposure,Economy and public finance
+IT equipment,CPU servers and storage,Electricity consumed,Electricity system
+IT equipment,CPU servers and storage,Semiconductors and memory,Materials and waste
+IT equipment,CPU servers and storage,Rare earths,Materials and waste
+IT equipment,CPU servers and storage,Embodied CO2,Atmosphere and climate
+IT equipment,CPU servers and storage,Electronic waste,Materials and waste
+IT equipment,CPU servers and storage,Hardware kept in use,Materials and waste
+IT equipment,CPU servers and storage,Hazardous waste,Materials and waste
+IT equipment,Networking and fibre,Connectivity,Economy and public finance
+IT equipment,Networking and fibre,Copper and aluminium,Materials and waste
+IT equipment,Networking and fibre,Gallium,Materials and waste
+IT equipment,Networking and fibre,Semiconductors and memory,Materials and waste
+IT equipment,Networking and fibre,Electronic waste,Materials and waste
+Cooling and water,Chillers and air handlers,Electricity consumed,Electricity system
+Cooling and water,Chillers and air handlers,Peak load,Electricity system
+Cooling and water,Chillers and air handlers,Continuous sound level,Sensory environment
+Cooling and water,Chillers and air handlers,Low-frequency sound,Sensory environment
+Cooling and water,Chillers and air handlers,Air temperature around sites,Atmosphere and climate
+Cooling and water,Chillers and air handlers,Operational CO2,Atmosphere and climate
+Cooling and water,Evaporative cooling towers,Water lost to evaporation,Water
+Cooling and water,Evaporative cooling towers,Municipal supply drawn,Water
+Cooling and water,Evaporative cooling towers,Peak-day water demand,Water
+Cooling and water,Evaporative cooling towers,Salinity and dissolved solids,Water
+Cooling and water,Evaporative cooling towers,Treatment chemicals and biocides,Water
+Cooling and water,Evaporative cooling towers,Metals in discharge water,Water
+Cooling and water,Evaporative cooling towers,Wastewater plant load,Water
+Cooling and water,Evaporative cooling towers,Continuous sound level,Sensory environment
+Cooling and water,Evaporative cooling towers,Allocation among water users,Water
+Cooling and water,Evaporative cooling towers,Groundwater level,Water
+Cooling and water,Dry coolers,Electricity consumed,Electricity system
+Cooling and water,Dry coolers,Peak load,Electricity system
+Cooling and water,Dry coolers,Continuous sound level,Sensory environment
+Cooling and water,Dry coolers,Air temperature around sites,Atmosphere and climate
+Cooling and water,Dry coolers,Resilience to extreme heat,Security
+Cooling and water,Direct-to-chip / immersion liquid cooling,Electricity consumed,Electricity system
+Cooling and water,Direct-to-chip / immersion liquid cooling,Exposure to hazardous materials,Health and safety
+Cooling and water,Direct-to-chip / immersion liquid cooling,Hazardous waste,Materials and waste
+Cooling and water,Direct-to-chip / immersion liquid cooling,Energy saved in other sectors,Feedbacks from the services provided
+Cooling and water,Water treatment and discharge,Treatment chemicals and biocides,Water
+Cooling and water,Water treatment and discharge,Metals in discharge water,Water
+Cooling and water,Water treatment and discharge,Salinity and dissolved solids,Water
+Cooling and water,Water treatment and discharge,Water temperature,Water
+Cooling and water,Water treatment and discharge,Wastewater plant load,Water
+Cooling and water,Water treatment and discharge,Reclaimed water in use,Water
+Cooling and water,Heat rejection and reuse,Energy saved in other sectors,Feedbacks from the services provided
+Cooling and water,Heat rejection and reuse,Air temperature around sites,Atmosphere and climate
+Cooling and water,Heat rejection and reuse,Water temperature,Water
+"People, contracts and end of life",Operations staff,Operations employment,Economy and public finance
+"People, contracts and end of life",Operations staff,Job quality and local share of jobs,Economy and public finance
+"People, contracts and end of life",Operations staff,Road traffic,Sensory environment
+"People, contracts and end of life",Operations staff,Visibility of infrastructure and its labour,Power and knowledge
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Public availability of project information,Power and knowledge
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Public availability of contract terms,Power and knowledge
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",State tax revenue forgone,Economy and public finance
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Local tax revenue,Economy and public finance
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Trust in developers and officials,Community life and place
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Bargaining power relative to developers,Power and knowledge
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Sense that promises are kept,Community life and place
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Clarity about who has authority,Power and knowledge
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Community say in decisions,Power and knowledge
+"People, contracts and end of life","Development agreements (NDAs, tax deals, CBAs)",Value kept by host regions and countries,Economy and public finance
+"People, contracts and end of life",Metering and reporting,Public data on energy and water use,Power and knowledge
+"People, contracts and end of life",Metering and reporting,Fit between official metrics and lived experience,Power and knowledge
+"People, contracts and end of life",Metering and reporting,Quality of information in public debate,Power and knowledge
+"People, contracts and end of life",Metering and reporting,Corporate climate targets,Atmosphere and climate
+"People, contracts and end of life",Metering and reporting,Certainty of future load,Electricity system
+"People, contracts and end of life",Decommissioning and IT asset disposition,Electronic waste,Materials and waste
+"People, contracts and end of life",Decommissioning and IT asset disposition,Hardware kept in use,Materials and waste
+"People, contracts and end of life",Decommissioning and IT asset disposition,Waste traded across borders,Materials and waste
+"People, contracts and end of life",Decommissioning and IT asset disposition,Contamination at disposal sites,Materials and waste
+"People, contracts and end of life",Decommissioning and IT asset disposition,Hazardous waste,Materials and waste
+"People, contracts and end of life",Decommissioning and IT asset disposition,Mining pressure on land and communities,Materials and waste

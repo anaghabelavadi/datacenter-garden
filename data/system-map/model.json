@@ -1,0 +1,6308 @@
+{
+ "title": "Data center system map",
+ "domains_order": [
+  "Electricity system",
+  "Atmosphere and climate",
+  "Water",
+  "Land and living systems",
+  "Materials and waste",
+  "Sensory environment",
+  "Health and safety",
+  "Economy and public finance",
+  "Community life and place",
+  "Power and knowledge",
+  "Security",
+  "Feedbacks from the services provided",
+  "Demand and technology",
+  "Data center decisions",
+  "Siting and grid access",
+  "Policy and governance",
+  "External conditions"
+ ],
+ "knowability": {
+  "M": "Measured or counted",
+  "E": "Modelled, estimated or anticipated",
+  "Q": "Qualitative or experienced",
+  "R": "Relational or contested"
+ },
+ "nodes": [
+  {
+   "id": "electricity_consumed",
+   "label": "Electricity consumed",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Demand on the grid",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 3
+  },
+  {
+   "id": "peak_load",
+   "label": "Peak load",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Demand on the grid",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 4
+  },
+  {
+   "id": "speed_of_load_swings",
+   "label": "Speed of load swings",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Demand on the grid",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 5
+  },
+  {
+   "id": "certainty_of_future_load",
+   "label": "Certainty of future load",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Demand on the grid",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 6
+  },
+  {
+   "id": "gas_generation",
+   "label": "Gas generation",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Generation mix",
+   "parent": "Fossil generation",
+   "know": "M",
+   "role": "aux",
+   "col": 7
+  },
+  {
+   "id": "coal_generation",
+   "label": "Coal generation",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Generation mix",
+   "parent": "Fossil generation",
+   "know": "M",
+   "role": "aux",
+   "col": 8
+  },
+  {
+   "id": "renewable_generation_and_storage",
+   "label": "Renewable generation and storage",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Generation mix",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 9
+  },
+  {
+   "id": "clean_firm_generation_nuclear_geothermal",
+   "label": "Clean firm generation (nuclear, geothermal)",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Generation mix",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 10
+  },
+  {
+   "id": "generation_outside_the_public_grid",
+   "label": "Generation outside the public grid",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Generation mix",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 11
+  },
+  {
+   "id": "transmission_capacity",
+   "label": "Transmission capacity",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Network capacity",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 12
+  },
+  {
+   "id": "substation_and_distribution_capacity",
+   "label": "Substation and distribution capacity",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Network capacity",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 13
+  },
+  {
+   "id": "connection_headroom_for_other_users",
+   "label": "Connection headroom for other users",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Network capacity",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 14
+  },
+  {
+   "id": "availability_of_grid_equipment",
+   "label": "Availability of grid equipment",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Network capacity",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 15
+  },
+  {
+   "id": "reserve_margin",
+   "label": "Reserve margin",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Reliability",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 16
+  },
+  {
+   "id": "frequency_and_voltage_stability",
+   "label": "Frequency and voltage stability",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Reliability",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 17
+  },
+  {
+   "id": "flexibility_available_to_grid_operators",
+   "label": "Flexibility available to grid operators",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Reliability",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 18
+  },
+  {
+   "id": "wholesale_energy_price",
+   "label": "Wholesale energy price",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Price and who pays",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 19
+  },
+  {
+   "id": "capacity_price",
+   "label": "Capacity price",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Price and who pays",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 20
+  },
+  {
+   "id": "household_electricity_bills",
+   "label": "Household electricity bills",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Price and who pays",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 21
+  },
+  {
+   "id": "share_of_grid_costs_carried_by_other_customers",
+   "label": "Share of grid costs carried by other customers",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Price and who pays",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 22
+  },
+  {
+   "id": "stranded_cost_exposure",
+   "label": "Stranded-cost exposure",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Price and who pays",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 23
+  },
+  {
+   "id": "utility_financial_health",
+   "label": "Utility financial health",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Price and who pays",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 24
+  },
+  {
+   "id": "natural_gas_demand",
+   "label": "Natural gas demand",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Fuels",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 25
+  },
+  {
+   "id": "diesel_stored_and_burned",
+   "label": "Diesel stored and burned",
+   "group": "impact",
+   "domain": "Electricity system",
+   "sub": "Fuels",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 26
+  },
+  {
+   "id": "operational_co2",
+   "label": "Operational CO2",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Greenhouse gases",
+   "parent": "Carbon dioxide",
+   "know": "E",
+   "role": "flow",
+   "col": 27
+  },
+  {
+   "id": "embodied_co2",
+   "label": "Embodied CO2",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Greenhouse gases",
+   "parent": "Carbon dioxide",
+   "know": "E",
+   "role": "flow",
+   "col": 28
+  },
+  {
+   "id": "methane",
+   "label": "Methane",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Greenhouse gases",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 29
+  },
+  {
+   "id": "state_and_national_climate_targets",
+   "label": "State and national climate targets",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Greenhouse gases",
+   "parent": "Progress toward climate targets",
+   "know": "M",
+   "role": "aux",
+   "col": 30
+  },
+  {
+   "id": "corporate_climate_targets",
+   "label": "Corporate climate targets",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Greenhouse gases",
+   "parent": "Progress toward climate targets",
+   "know": "R",
+   "role": "aux",
+   "col": 31
+  },
+  {
+   "id": "nitrogen_oxides",
+   "label": "Nitrogen oxides",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Local air",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 32
+  },
+  {
+   "id": "fine_particulate_matter",
+   "label": "Fine particulate matter",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Local air",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 33
+  },
+  {
+   "id": "sulfur_dioxide",
+   "label": "Sulfur dioxide",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Local air",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 34
+  },
+  {
+   "id": "carbon_monoxide",
+   "label": "Carbon monoxide",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Local air",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 35
+  },
+  {
+   "id": "air_temperature_around_sites",
+   "label": "Air temperature around sites",
+   "group": "impact",
+   "domain": "Atmosphere and climate",
+   "sub": "Local heat",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 36
+  },
+  {
+   "id": "municipal_supply_drawn",
+   "label": "Municipal supply drawn",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 37
+  },
+  {
+   "id": "groundwater_level",
+   "label": "Groundwater level",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 38
+  },
+  {
+   "id": "river_and_stream_flow",
+   "label": "River and stream flow",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 39
+  },
+  {
+   "id": "reclaimed_water_in_use",
+   "label": "Reclaimed water in use",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 40
+  },
+  {
+   "id": "water_lost_to_evaporation",
+   "label": "Water lost to evaporation",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 41
+  },
+  {
+   "id": "peak_day_water_demand",
+   "label": "Peak-day water demand",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 42
+  },
+  {
+   "id": "water_embedded_in_electricity",
+   "label": "Water embedded in electricity",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 43
+  },
+  {
+   "id": "water_embedded_in_hardware",
+   "label": "Water embedded in hardware",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quantity",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 44
+  },
+  {
+   "id": "salinity_and_dissolved_solids",
+   "label": "Salinity and dissolved solids",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quality",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 45
+  },
+  {
+   "id": "treatment_chemicals_and_biocides",
+   "label": "Treatment chemicals and biocides",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quality",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 46
+  },
+  {
+   "id": "metals_in_discharge_water",
+   "label": "Metals in discharge water",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quality",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 47
+  },
+  {
+   "id": "water_temperature",
+   "label": "Water temperature",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quality",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 48
+  },
+  {
+   "id": "sediment_and_runoff",
+   "label": "Sediment and runoff",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quality",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 49
+  },
+  {
+   "id": "fuel_and_oil_contamination",
+   "label": "Fuel and oil contamination",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Quality",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 50
+  },
+  {
+   "id": "utility_supply_capacity",
+   "label": "Utility supply capacity",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Water systems",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 51
+  },
+  {
+   "id": "wastewater_plant_load",
+   "label": "Wastewater plant load",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Water systems",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 52
+  },
+  {
+   "id": "water_price",
+   "label": "Water price",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Water systems",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 53
+  },
+  {
+   "id": "allocation_among_water_users",
+   "label": "Allocation among water users",
+   "group": "impact",
+   "domain": "Water",
+   "sub": "Water systems",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 54
+  },
+  {
+   "id": "farmland",
+   "label": "Farmland",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Land cover",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 55
+  },
+  {
+   "id": "forest_and_green_space",
+   "label": "Forest and green space",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Land cover",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 56
+  },
+  {
+   "id": "wetlands_and_streams",
+   "label": "Wetlands and streams",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Land cover",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 57
+  },
+  {
+   "id": "impervious_surface",
+   "label": "Impervious surface",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Land cover",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 58
+  },
+  {
+   "id": "reused_industrial_land",
+   "label": "Reused industrial land",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Land cover",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 59
+  },
+  {
+   "id": "land_held_for_power_lines_and_plants",
+   "label": "Land held for power lines and plants",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Land cover",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 60
+  },
+  {
+   "id": "habitat_extent_and_connectivity",
+   "label": "Habitat extent and connectivity",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Living systems",
+   "parent": "",
+   "know": "E",
+   "role": "stock",
+   "col": 61
+  },
+  {
+   "id": "birds_and_wildlife",
+   "label": "Birds and wildlife",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Living systems",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 62
+  },
+  {
+   "id": "groundwater_recharge",
+   "label": "Groundwater recharge",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Living systems",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 63
+  },
+  {
+   "id": "archaeological_sites",
+   "label": "Archaeological sites",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Heritage",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 64
+  },
+  {
+   "id": "cemeteries",
+   "label": "Cemeteries",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Heritage",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 65
+  },
+  {
+   "id": "historic_landscapes_and_viewsheds",
+   "label": "Historic landscapes and viewsheds",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Heritage",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 66
+  },
+  {
+   "id": "visual_character",
+   "label": "Visual character",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Landscape and access",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 67
+  },
+  {
+   "id": "public_access_to_open_space",
+   "label": "Public access to open space",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Landscape and access",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 68
+  },
+  {
+   "id": "security_of_land_tenure",
+   "label": "Security of land tenure",
+   "group": "impact",
+   "domain": "Land and living systems",
+   "sub": "Landscape and access",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 69
+  },
+  {
+   "id": "copper_and_aluminium",
+   "label": "Copper and aluminium",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Material demand",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 70
+  },
+  {
+   "id": "gallium",
+   "label": "Gallium",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Material demand",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 71
+  },
+  {
+   "id": "rare_earths",
+   "label": "Rare earths",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Material demand",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 72
+  },
+  {
+   "id": "battery_minerals",
+   "label": "Battery minerals",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Material demand",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 73
+  },
+  {
+   "id": "semiconductors_and_memory",
+   "label": "Semiconductors and memory",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Material demand",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 74
+  },
+  {
+   "id": "mining_pressure_on_land_and_communities",
+   "label": "Mining pressure on land and communities",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Source regions",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 75
+  },
+  {
+   "id": "electronic_waste",
+   "label": "Electronic waste",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Waste",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 76
+  },
+  {
+   "id": "hazardous_waste",
+   "label": "Hazardous waste",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Waste",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 77
+  },
+  {
+   "id": "hardware_kept_in_use",
+   "label": "Hardware kept in use",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Waste",
+   "parent": "",
+   "know": "E",
+   "role": "stock",
+   "col": 78
+  },
+  {
+   "id": "waste_traded_across_borders",
+   "label": "Waste traded across borders",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Waste",
+   "parent": "",
+   "know": "E",
+   "role": "flow",
+   "col": 79
+  },
+  {
+   "id": "contamination_at_disposal_sites",
+   "label": "Contamination at disposal sites",
+   "group": "impact",
+   "domain": "Materials and waste",
+   "sub": "Waste",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 80
+  },
+  {
+   "id": "continuous_sound_level",
+   "label": "Continuous sound level",
+   "group": "impact",
+   "domain": "Sensory environment",
+   "sub": "Sound",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 81
+  },
+  {
+   "id": "low_frequency_sound",
+   "label": "Low-frequency sound",
+   "group": "impact",
+   "domain": "Sensory environment",
+   "sub": "Sound",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 82
+  },
+  {
+   "id": "intermittent_sound",
+   "label": "Intermittent sound",
+   "group": "impact",
+   "domain": "Sensory environment",
+   "sub": "Sound",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 83
+  },
+  {
+   "id": "night_time_light",
+   "label": "Night-time light",
+   "group": "impact",
+   "domain": "Sensory environment",
+   "sub": "Light",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 84
+  },
+  {
+   "id": "road_traffic",
+   "label": "Road traffic",
+   "group": "impact",
+   "domain": "Sensory environment",
+   "sub": "Movement",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 85
+  },
+  {
+   "id": "duration_of_construction",
+   "label": "Duration of construction",
+   "group": "impact",
+   "domain": "Sensory environment",
+   "sub": "Movement",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 86
+  },
+  {
+   "id": "respiratory_illness",
+   "label": "Respiratory illness",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Physical health",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 87
+  },
+  {
+   "id": "premature_death",
+   "label": "Premature death",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Physical health",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 88
+  },
+  {
+   "id": "cost_of_health_damage",
+   "label": "Cost of health damage",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Physical health",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 89
+  },
+  {
+   "id": "sleep",
+   "label": "Sleep",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Rest and mental health",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 90
+  },
+  {
+   "id": "stress_and_anxiety",
+   "label": "Stress and anxiety",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Rest and mental health",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 91
+  },
+  {
+   "id": "fire_risk",
+   "label": "Fire risk",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Safety",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 92
+  },
+  {
+   "id": "exposure_to_hazardous_materials",
+   "label": "Exposure to hazardous materials",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Safety",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 93
+  },
+  {
+   "id": "emergency_vehicle_access",
+   "label": "Emergency vehicle access",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Safety",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 94
+  },
+  {
+   "id": "distribution_of_exposure_across_places_and_group",
+   "label": "Distribution of exposure across places and groups",
+   "group": "impact",
+   "domain": "Health and safety",
+   "sub": "Who is exposed",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 95
+  },
+  {
+   "id": "construction_employment",
+   "label": "Construction employment",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Work",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 96
+  },
+  {
+   "id": "operations_employment",
+   "label": "Operations employment",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Work",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 97
+  },
+  {
+   "id": "supply_chain_employment",
+   "label": "Supply-chain employment",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Work",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 98
+  },
+  {
+   "id": "job_quality_and_local_share_of_jobs",
+   "label": "Job quality and local share of jobs",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Work",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 99
+  },
+  {
+   "id": "availability_of_skilled_trades",
+   "label": "Availability of skilled trades",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Work",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 100
+  },
+  {
+   "id": "local_tax_revenue",
+   "label": "Local tax revenue",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Public money",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 101
+  },
+  {
+   "id": "state_tax_revenue_forgone",
+   "label": "State tax revenue forgone",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Public money",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 102
+  },
+  {
+   "id": "public_service_and_infrastructure_spending",
+   "label": "Public service and infrastructure spending",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Public money",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 103
+  },
+  {
+   "id": "fiscal_dependence_on_one_industry",
+   "label": "Fiscal dependence on one industry",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Public money",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 104
+  },
+  {
+   "id": "capital_investment",
+   "label": "Capital investment",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Local economy",
+   "parent": "",
+   "know": "M",
+   "role": "flow",
+   "col": 105
+  },
+  {
+   "id": "regional_output_and_income",
+   "label": "Regional output and income",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Local economy",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 106
+  },
+  {
+   "id": "room_for_other_businesses_to_grow",
+   "label": "Room for other businesses to grow",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Local economy",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 107
+  },
+  {
+   "id": "property_values",
+   "label": "Property values",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Local economy",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 108
+  },
+  {
+   "id": "connectivity",
+   "label": "Connectivity",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Local economy",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 109
+  },
+  {
+   "id": "investment_share_of_growth",
+   "label": "Investment share of growth",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Wider economy",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 110
+  },
+  {
+   "id": "debt_and_financial_exposure",
+   "label": "Debt and financial exposure",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Wider economy",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 111
+  },
+  {
+   "id": "productivity",
+   "label": "Productivity",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Wider economy",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 112
+  },
+  {
+   "id": "value_kept_by_host_regions_and_countries",
+   "label": "Value kept by host regions and countries",
+   "group": "impact",
+   "domain": "Economy and public finance",
+   "sub": "Wider economy",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 113
+  },
+  {
+   "id": "use_of_home_and_outdoor_space",
+   "label": "Use of home and outdoor space",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Everyday life",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 114
+  },
+  {
+   "id": "daily_routines",
+   "label": "Daily routines",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Everyday life",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 115
+  },
+  {
+   "id": "rural_or_residential_character",
+   "label": "Rural or residential character",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Place",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 116
+  },
+  {
+   "id": "regional_identity",
+   "label": "Regional identity",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Place",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 117
+  },
+  {
+   "id": "relation_to_earlier_industrial_and_extractive_hi",
+   "label": "Relation to earlier industrial and extractive history",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Place",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 118
+  },
+  {
+   "id": "hope_for_jobs_and_renewal",
+   "label": "Hope for jobs and renewal",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Outlook",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 119
+  },
+  {
+   "id": "fear_for_the_community_s_future",
+   "label": "Fear for the community's future",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Outlook",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 120
+  },
+  {
+   "id": "sense_that_promises_are_kept",
+   "label": "Sense that promises are kept",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Outlook",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 121
+  },
+  {
+   "id": "trust_in_developers_and_officials",
+   "label": "Trust in developers and officials",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Social relations",
+   "parent": "",
+   "know": "Q",
+   "role": "stock",
+   "col": 122
+  },
+  {
+   "id": "conflict_and_organised_opposition",
+   "label": "Conflict and organised opposition",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Social relations",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 123
+  },
+  {
+   "id": "public_opinion",
+   "label": "Public opinion",
+   "group": "impact",
+   "domain": "Community life and place",
+   "sub": "Social relations",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 124
+  },
+  {
+   "id": "local_control_over_land_use",
+   "label": "Local control over land use",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Voice",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 125
+  },
+  {
+   "id": "community_say_in_decisions",
+   "label": "Community say in decisions",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Voice",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 126
+  },
+  {
+   "id": "bargaining_power_relative_to_developers",
+   "label": "Bargaining power relative to developers",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Voice",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 127
+  },
+  {
+   "id": "clarity_about_who_has_authority",
+   "label": "Clarity about who has authority",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Voice",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 128
+  },
+  {
+   "id": "public_availability_of_project_information",
+   "label": "Public availability of project information",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Openness",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 129
+  },
+  {
+   "id": "public_availability_of_contract_terms",
+   "label": "Public availability of contract terms",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Openness",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 130
+  },
+  {
+   "id": "public_data_on_energy_and_water_use",
+   "label": "Public data on energy and water use",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Openness",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 131
+  },
+  {
+   "id": "fit_between_official_metrics_and_lived_experienc",
+   "label": "Fit between official metrics and lived experience",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Knowing",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 132
+  },
+  {
+   "id": "visibility_of_infrastructure_and_its_labour",
+   "label": "Visibility of infrastructure and its labour",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Knowing",
+   "parent": "",
+   "know": "Q",
+   "role": "aux",
+   "col": 133
+  },
+  {
+   "id": "quality_of_information_in_public_debate",
+   "label": "Quality of information in public debate",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Knowing",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 134
+  },
+  {
+   "id": "match_between_who_benefits_and_who_bears_costs",
+   "label": "Match between who benefits and who bears costs",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Fairness",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 135
+  },
+  {
+   "id": "attention_to_cumulative_and_regional_effects",
+   "label": "Attention to cumulative and regional effects",
+   "group": "impact",
+   "domain": "Power and knowledge",
+   "sub": "Fairness",
+   "parent": "",
+   "know": "R",
+   "role": "aux",
+   "col": 136
+  },
+  {
+   "id": "national_compute_capacity",
+   "label": "National compute capacity",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Strategic position",
+   "parent": "",
+   "know": "M",
+   "role": "stock",
+   "col": 137
+  },
+  {
+   "id": "supplier_concentration",
+   "label": "Supplier concentration",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Strategic position",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 138
+  },
+  {
+   "id": "openness_of_trade_in_minerals_and_equipment",
+   "label": "Openness of trade in minerals and equipment",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Strategic position",
+   "parent": "",
+   "know": "M",
+   "role": "aux",
+   "col": 139
+  },
+  {
+   "id": "regional_self_sufficiency_in_power",
+   "label": "Regional self-sufficiency in power",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Energy security",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 140
+  },
+  {
+   "id": "exposure_to_supply_shocks",
+   "label": "Exposure to supply shocks",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Energy security",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 141
+  },
+  {
+   "id": "physical_attack_on_facilities",
+   "label": "Physical attack on facilities",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Threats",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 142
+  },
+  {
+   "id": "cyberattack_on_energy_systems",
+   "label": "Cyberattack on energy systems",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Threats",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 143
+  },
+  {
+   "id": "resilience_to_extreme_heat",
+   "label": "Resilience to extreme heat",
+   "group": "impact",
+   "domain": "Security",
+   "sub": "Threats",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 144
+  },
+  {
+   "id": "energy_saved_in_other_sectors",
+   "label": "Energy saved in other sectors",
+   "group": "impact",
+   "domain": "Feedbacks from the services provided",
+   "sub": "Energy feedbacks",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 145
+  },
+  {
+   "id": "energy_demand_induced_elsewhere",
+   "label": "Energy demand induced elsewhere",
+   "group": "impact",
+   "domain": "Feedbacks from the services provided",
+   "sub": "Energy feedbacks",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 146
+  },
+  {
+   "id": "reinvestment_of_efficiency_gains_in_more_computi",
+   "label": "Reinvestment of efficiency gains in more computing",
+   "group": "impact",
+   "domain": "Feedbacks from the services provided",
+   "sub": "Energy feedbacks",
+   "parent": "",
+   "know": "E",
+   "role": "aux",
+   "col": 147
+  },
+  {
+   "id": "ai_capability",
+   "label": "AI capability",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "What frontier and deployed models can do"
+  },
+  {
+   "id": "ai_adoption_and_usage",
+   "label": "AI adoption and usage",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Users, queries, enterprise integration"
+  },
+  {
+   "id": "demand_for_compute",
+   "label": "Demand for compute",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Training + inference + cloud workloads"
+  },
+  {
+   "id": "ai_and_cloud_revenue",
+   "label": "AI and cloud revenue",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "flow",
+   "note": "Money returned by compute services"
+  },
+  {
+   "id": "chip_energy_efficiency",
+   "label": "Chip energy efficiency",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Compute per watt of new hardware (exogenous trend)"
+  },
+  {
+   "id": "model_and_software_efficiency",
+   "label": "Model and software efficiency",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Algorithmic gains, quantisation, distillation"
+  },
+  {
+   "id": "cost_per_unit_of_compute",
+   "label": "Cost per unit of compute",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "All-in $ per useful FLOP"
+  },
+  {
+   "id": "chip_and_equipment_supply",
+   "label": "Chip and equipment supply",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Fab, packaging, HBM and grid-equipment throughput"
+  },
+  {
+   "id": "critical_mineral_prices",
+   "label": "Critical mineral prices",
+   "group": "driver",
+   "domain": "Demand and technology",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Ga, REE, Cu, Li price signal"
+  },
+  {
+   "id": "investor_expectations",
+   "label": "Investor expectations",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "Accumulated belief in future AI returns"
+  },
+  {
+   "id": "data_center_capex",
+   "label": "Data center capex",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "flow",
+   "note": "Hyperscaler, neocloud and developer spending"
+  },
+  {
+   "id": "planned_pipeline",
+   "label": "Planned pipeline",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "Announced / permitted MW not yet under construction"
+  },
+  {
+   "id": "capacity_under_construction",
+   "label": "Capacity under construction",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "MW being built"
+  },
+  {
+   "id": "installed_it_capacity",
+   "label": "Installed IT capacity",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "Operating MW of IT load"
+  },
+  {
+   "id": "hardware_purchases",
+   "label": "Hardware purchases",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "flow",
+   "note": "Servers, GPUs, storage, network bought per year"
+  },
+  {
+   "id": "hardware_retirement",
+   "label": "Hardware retirement",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "flow",
+   "note": "Servers leaving service per year"
+  },
+  {
+   "id": "server_refresh_rate",
+   "label": "Server refresh rate",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "1 / average service life"
+  },
+  {
+   "id": "server_utilization",
+   "label": "Server utilization",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Share of capacity doing useful work"
+  },
+  {
+   "id": "rack_power_density",
+   "label": "Rack power density",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "kW per rack"
+  },
+  {
+   "id": "pue",
+   "label": "PUE",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Facility energy / IT energy"
+  },
+  {
+   "id": "evaporative_cooling_share",
+   "label": "Evaporative cooling share",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Share of heat rejected by evaporating water"
+  },
+  {
+   "id": "liquid_cooling_share",
+   "label": "Liquid cooling share",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Direct-to-chip / immersion share"
+  },
+  {
+   "id": "heat_reuse",
+   "label": "Heat reuse",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Waste heat exported to district heating, greenhouses"
+  },
+  {
+   "id": "demand_response_by_data_centers",
+   "label": "Demand response by data centers",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Willingness to curtail / shift load"
+  },
+  {
+   "id": "clean_energy_procurement",
+   "label": "Clean energy procurement",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "PPAs, 24/7 CFE deals, nuclear restarts"
+  },
+  {
+   "id": "developer_secrecy",
+   "label": "Developer secrecy",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "NDAs, shell-company names, withheld data"
+  },
+  {
+   "id": "community_benefit_agreements",
+   "label": "Community benefit agreements",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Binding commitments to host communities"
+  },
+  {
+   "id": "material_recovery_from_retired_hardware",
+   "label": "Material recovery from retired hardware",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "flow",
+   "note": "Reuse, refurbishment, metal recovery"
+  },
+  {
+   "id": "secondary_material_supply",
+   "label": "Secondary material supply",
+   "group": "driver",
+   "domain": "Data center decisions",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "Recovered Cu, Au, Ga, REE available to re-enter use"
+  },
+  {
+   "id": "siting_attractiveness",
+   "label": "Siting attractiveness",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Composite pull of a location"
+  },
+  {
+   "id": "power_availability_at_site",
+   "label": "Power availability at site",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "MW obtainable on a useful timeline"
+  },
+  {
+   "id": "interconnection_queue",
+   "label": "Interconnection queue",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "Large-load requests waiting for study / connection"
+  },
+  {
+   "id": "grid_connection_wait_time",
+   "label": "Grid connection wait time",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Years from request to energisation"
+  },
+  {
+   "id": "land_availability",
+   "label": "Land availability",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Suitable, zoned, affordable parcels"
+  },
+  {
+   "id": "permitting_speed",
+   "label": "Permitting speed",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Speed of local/state approvals"
+  },
+  {
+   "id": "utility_grid_investment",
+   "label": "Utility grid investment",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "flow",
+   "note": "Utility spending on wires, substations, plants"
+  },
+  {
+   "id": "utility_rate_base",
+   "label": "Utility rate base",
+   "group": "driver",
+   "domain": "Siting and grid access",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "Undepreciated utility assets earning a return"
+  },
+  {
+   "id": "data_center_tax_incentives",
+   "label": "Data center tax incentives",
+   "group": "driver",
+   "domain": "Policy and governance",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Sales/use-tax exemptions, abatements"
+  },
+  {
+   "id": "zoning_limits_and_moratoria",
+   "label": "Zoning limits and moratoria",
+   "group": "driver",
+   "domain": "Policy and governance",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Local restrictions on where / whether DCs build"
+  },
+  {
+   "id": "large_load_tariffs",
+   "label": "Large-load tariffs",
+   "group": "driver",
+   "domain": "Policy and governance",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Rules making big loads pay for their grid costs, min. take, collateral"
+  },
+  {
+   "id": "disclosure_rules",
+   "label": "Disclosure rules",
+   "group": "driver",
+   "domain": "Policy and governance",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Mandatory reporting of energy, water, contracts"
+  },
+  {
+   "id": "clean_energy_standards",
+   "label": "Clean energy standards",
+   "group": "driver",
+   "domain": "Policy and governance",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "RPS / CES, coal retirement policy"
+  },
+  {
+   "id": "cost_of_capital",
+   "label": "Cost of capital",
+   "group": "driver",
+   "domain": "External conditions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Interest rates + risk premium"
+  },
+  {
+   "id": "atmospheric_greenhouse_gas_stock",
+   "label": "Atmospheric greenhouse gas stock",
+   "group": "driver",
+   "domain": "External conditions",
+   "sub": "",
+   "know": "",
+   "role": "stock",
+   "note": "Accumulated CO2e"
+  },
+  {
+   "id": "climate_change",
+   "label": "Climate change",
+   "group": "driver",
+   "domain": "External conditions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Warming, heat waves, shifting rainfall"
+  },
+  {
+   "id": "drought_and_water_scarcity",
+   "label": "Drought and water scarcity",
+   "group": "driver",
+   "domain": "External conditions",
+   "sub": "",
+   "know": "",
+   "role": "aux",
+   "note": "Local water stress"
+  }
+ ],
+ "edges": [
+  {
+   "source": "ai_capability",
+   "target": "ai_adoption_and_usage",
+   "sign": "+",
+   "delay": false,
+   "note": "better models find more uses"
+  },
+  {
+   "source": "ai_adoption_and_usage",
+   "target": "demand_for_compute",
+   "sign": "+",
+   "delay": false,
+   "note": "inference load grows with use"
+  },
+  {
+   "source": "ai_adoption_and_usage",
+   "target": "ai_and_cloud_revenue",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "ai_and_cloud_revenue",
+   "target": "investor_expectations",
+   "sign": "+",
+   "delay": false,
+   "note": "revenue validates the narrative"
+  },
+  {
+   "source": "investor_expectations",
+   "target": "data_center_capex",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "cost_of_capital",
+   "target": "data_center_capex",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "data_center_capex",
+   "target": "planned_pipeline",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "data_center_capex",
+   "target": "capital_investment",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "data_center_capex",
+   "target": "debt_and_financial_exposure",
+   "sign": "+",
+   "delay": false,
+   "note": "bond, private-credit and lease financing"
+  },
+  {
+   "source": "debt_and_financial_exposure",
+   "target": "cost_of_capital",
+   "sign": "+",
+   "delay": false,
+   "note": "leverage raises risk premium"
+  },
+  {
+   "source": "demand_for_compute",
+   "target": "planned_pipeline",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "siting_attractiveness",
+   "target": "planned_pipeline",
+   "sign": "+",
+   "delay": false,
+   "note": "where projects get proposed"
+  },
+  {
+   "source": "planned_pipeline",
+   "target": "capacity_under_construction",
+   "sign": "+",
+   "delay": true,
+   "note": "construction starts"
+  },
+  {
+   "source": "permitting_speed",
+   "target": "capacity_under_construction",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "installed_it_capacity",
+   "sign": "+",
+   "delay": true,
+   "note": "commissioning (duration is an open question)"
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "national_compute_capacity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "national_compute_capacity",
+   "target": "ai_capability",
+   "sign": "+",
+   "delay": true,
+   "note": "more training compute"
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "cost_per_unit_of_compute",
+   "sign": "-",
+   "delay": false,
+   "note": "scale economies"
+  },
+  {
+   "source": "chip_energy_efficiency",
+   "target": "cost_per_unit_of_compute",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "model_and_software_efficiency",
+   "target": "cost_per_unit_of_compute",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "server_utilization",
+   "target": "cost_per_unit_of_compute",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "chip_and_equipment_supply",
+   "target": "cost_per_unit_of_compute",
+   "sign": "-",
+   "delay": false,
+   "note": "scarcity premia on GPUs, HBM"
+  },
+  {
+   "source": "critical_mineral_prices",
+   "target": "cost_per_unit_of_compute",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "cost_per_unit_of_compute",
+   "target": "demand_for_compute",
+   "sign": "-",
+   "delay": false,
+   "note": "price elasticity"
+  },
+  {
+   "source": "cost_per_unit_of_compute",
+   "target": "reinvestment_of_efficiency_gains_in_more_computi",
+   "sign": "-",
+   "delay": false,
+   "note": "cheaper compute is reinvested in bigger models"
+  },
+  {
+   "source": "reinvestment_of_efficiency_gains_in_more_computi",
+   "target": "demand_for_compute",
+   "sign": "+",
+   "delay": false,
+   "note": "rebound / Jevons"
+  },
+  {
+   "source": "demand_for_compute",
+   "target": "electricity_consumed",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "electricity_consumed",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "server_utilization",
+   "target": "electricity_consumed",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "chip_energy_efficiency",
+   "target": "electricity_consumed",
+   "sign": "-",
+   "delay": false,
+   "note": "per unit of compute"
+  },
+  {
+   "source": "model_and_software_efficiency",
+   "target": "electricity_consumed",
+   "sign": "-",
+   "delay": false,
+   "note": "per unit of service"
+  },
+  {
+   "source": "pue",
+   "target": "electricity_consumed",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "electricity_consumed",
+   "target": "peak_load",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "peak_load",
+   "sign": "+",
+   "delay": false,
+   "note": "contracted capacity, near-flat profile"
+  },
+  {
+   "source": "rack_power_density",
+   "target": "peak_load",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "rack_power_density",
+   "target": "liquid_cooling_share",
+   "sign": "+",
+   "delay": false,
+   "note": "above some density air cooling is no longer enough (threshold to source)"
+  },
+  {
+   "source": "liquid_cooling_share",
+   "target": "pue",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "demand_for_compute",
+   "target": "speed_of_load_swings",
+   "sign": "+",
+   "delay": false,
+   "note": "synchronised GPU training steps swing tens of MW"
+  },
+  {
+   "source": "rack_power_density",
+   "target": "speed_of_load_swings",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "speed_of_load_swings",
+   "target": "frequency_and_voltage_stability",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "planned_pipeline",
+   "target": "certainty_of_future_load",
+   "sign": "-",
+   "delay": false,
+   "note": "speculative and duplicate requests"
+  },
+  {
+   "source": "interconnection_queue",
+   "target": "certainty_of_future_load",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "disclosure_rules",
+   "target": "certainty_of_future_load",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "chip_energy_efficiency",
+   "target": "server_refresh_rate",
+   "sign": "+",
+   "delay": false,
+   "note": "newer chips make old ones uneconomic"
+  },
+  {
+   "source": "server_refresh_rate",
+   "target": "hardware_purchases",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "server_refresh_rate",
+   "target": "hardware_retirement",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "hardware_purchases",
+   "sign": "+",
+   "delay": false,
+   "note": "new halls must be filled"
+  },
+  {
+   "source": "chip_and_equipment_supply",
+   "target": "hardware_purchases",
+   "sign": "+",
+   "delay": false,
+   "note": "supply constraint"
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "hardware_kept_in_use",
+   "sign": "+",
+   "delay": false,
+   "note": "inflow to in-use stock"
+  },
+  {
+   "source": "hardware_retirement",
+   "target": "hardware_kept_in_use",
+   "sign": "-",
+   "delay": false,
+   "note": "outflow from in-use stock"
+  },
+  {
+   "source": "hardware_kept_in_use",
+   "target": "hardware_retirement",
+   "sign": "+",
+   "delay": false,
+   "note": "bigger fleet, more retirements"
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "embodied_co2",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "semiconductors_and_memory",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "gallium",
+   "sign": "+",
+   "delay": false,
+   "note": "GaN power, photonics"
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "rare_earths",
+   "sign": "+",
+   "delay": false,
+   "note": "HDD magnets, fans"
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "copper_and_aluminium",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "water_embedded_in_hardware",
+   "sign": "+",
+   "delay": false,
+   "note": "fab ultrapure water"
+  },
+  {
+   "source": "hardware_purchases",
+   "target": "supply_chain_employment",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "embodied_co2",
+   "sign": "+",
+   "delay": false,
+   "note": "concrete, steel"
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "copper_and_aluminium",
+   "sign": "+",
+   "delay": false,
+   "note": "busbars, cable, transformers"
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "battery_minerals",
+   "sign": "+",
+   "delay": false,
+   "note": "UPS and BESS"
+  },
+  {
+   "source": "renewable_generation_and_storage",
+   "target": "battery_minerals",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "gallium",
+   "target": "critical_mineral_prices",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "rare_earths",
+   "target": "critical_mineral_prices",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "copper_and_aluminium",
+   "target": "critical_mineral_prices",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "battery_minerals",
+   "target": "critical_mineral_prices",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "gallium",
+   "target": "mining_pressure_on_land_and_communities",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "rare_earths",
+   "target": "mining_pressure_on_land_and_communities",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "copper_and_aluminium",
+   "target": "mining_pressure_on_land_and_communities",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "battery_minerals",
+   "target": "mining_pressure_on_land_and_communities",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "semiconductors_and_memory",
+   "target": "supplier_concentration",
+   "sign": "+",
+   "delay": false,
+   "note": "demand flows to a few fabs and HBM makers"
+  },
+  {
+   "source": "supplier_concentration",
+   "target": "exposure_to_supply_shocks",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "openness_of_trade_in_minerals_and_equipment",
+   "target": "chip_and_equipment_supply",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "exposure_to_supply_shocks",
+   "target": "chip_and_equipment_supply",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "hardware_retirement",
+   "target": "electronic_waste",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "hardware_retirement",
+   "target": "material_recovery_from_retired_hardware",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "critical_mineral_prices",
+   "target": "material_recovery_from_retired_hardware",
+   "sign": "+",
+   "delay": false,
+   "note": "recovery pays when prices rise"
+  },
+  {
+   "source": "material_recovery_from_retired_hardware",
+   "target": "electronic_waste",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "material_recovery_from_retired_hardware",
+   "target": "secondary_material_supply",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "secondary_material_supply",
+   "target": "mining_pressure_on_land_and_communities",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "secondary_material_supply",
+   "target": "exposure_to_supply_shocks",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "electronic_waste",
+   "target": "waste_traded_across_borders",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "electronic_waste",
+   "target": "hazardous_waste",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "electronic_waste",
+   "target": "contamination_at_disposal_sites",
+   "sign": "+",
+   "delay": true,
+   "note": ""
+  },
+  {
+   "source": "waste_traded_across_borders",
+   "target": "distribution_of_exposure_across_places_and_group",
+   "sign": "+",
+   "delay": false,
+   "note": "burdens exported"
+  },
+  {
+   "source": "copper_and_aluminium",
+   "target": "availability_of_grid_equipment",
+   "sign": "-",
+   "delay": false,
+   "note": "competition for the same metals"
+  },
+  {
+   "source": "peak_load",
+   "target": "utility_grid_investment",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "utility_grid_investment",
+   "target": "availability_of_grid_equipment",
+   "sign": "-",
+   "delay": false,
+   "note": "transformer and breaker backlogs"
+  },
+  {
+   "source": "utility_grid_investment",
+   "target": "copper_and_aluminium",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "availability_of_grid_equipment",
+   "target": "transmission_capacity",
+   "sign": "+",
+   "delay": true,
+   "note": ""
+  },
+  {
+   "source": "availability_of_grid_equipment",
+   "target": "substation_and_distribution_capacity",
+   "sign": "+",
+   "delay": true,
+   "note": ""
+  },
+  {
+   "source": "utility_grid_investment",
+   "target": "transmission_capacity",
+   "sign": "+",
+   "delay": true,
+   "note": ""
+  },
+  {
+   "source": "utility_grid_investment",
+   "target": "substation_and_distribution_capacity",
+   "sign": "+",
+   "delay": true,
+   "note": ""
+  },
+  {
+   "source": "utility_grid_investment",
+   "target": "utility_rate_base",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "utility_grid_investment",
+   "target": "land_held_for_power_lines_and_plants",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "utility_rate_base",
+   "target": "household_electricity_bills",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "utility_rate_base",
+   "target": "utility_financial_health",
+   "sign": "+",
+   "delay": false,
+   "note": "regulated return on assets"
+  },
+  {
+   "source": "utility_financial_health",
+   "target": "utility_grid_investment",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "stranded_cost_exposure",
+   "target": "utility_financial_health",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "planned_pipeline",
+   "target": "interconnection_queue",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "peak_load",
+   "target": "interconnection_queue",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "interconnection_queue",
+   "target": "grid_connection_wait_time",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "transmission_capacity",
+   "target": "grid_connection_wait_time",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "substation_and_distribution_capacity",
+   "target": "grid_connection_wait_time",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "flexibility_available_to_grid_operators",
+   "target": "grid_connection_wait_time",
+   "sign": "-",
+   "delay": false,
+   "note": "flexible / curtailable connections"
+  },
+  {
+   "source": "grid_connection_wait_time",
+   "target": "power_availability_at_site",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "grid_connection_wait_time",
+   "target": "generation_outside_the_public_grid",
+   "sign": "+",
+   "delay": false,
+   "note": "bring-your-own-power"
+  },
+  {
+   "source": "generation_outside_the_public_grid",
+   "target": "power_availability_at_site",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "generation_outside_the_public_grid",
+   "target": "natural_gas_demand",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "generation_outside_the_public_grid",
+   "target": "nitrogen_oxides",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "generation_outside_the_public_grid",
+   "target": "continuous_sound_level",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "generation_outside_the_public_grid",
+   "target": "low_frequency_sound",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "generation_outside_the_public_grid",
+   "target": "clarity_about_who_has_authority",
+   "sign": "-",
+   "delay": false,
+   "note": "regulatory grey zone between utility and air permits"
+  },
+  {
+   "source": "generation_outside_the_public_grid",
+   "target": "distribution_of_exposure_across_places_and_group",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "power_availability_at_site",
+   "target": "siting_attractiveness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "peak_load",
+   "target": "connection_headroom_for_other_users",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "connection_headroom_for_other_users",
+   "target": "room_for_other_businesses_to_grow",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "peak_load",
+   "target": "reserve_margin",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "flexibility_available_to_grid_operators",
+   "target": "reserve_margin",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "reserve_margin",
+   "target": "capacity_price",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "reserve_margin",
+   "target": "regional_self_sufficiency_in_power",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "reserve_margin",
+   "target": "resilience_to_extreme_heat",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "peak_load",
+   "target": "resilience_to_extreme_heat",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "demand_response_by_data_centers",
+   "target": "flexibility_available_to_grid_operators",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "demand_response_by_data_centers",
+   "target": "diesel_stored_and_burned",
+   "sign": "+",
+   "delay": false,
+   "note": "if curtailment runs on backup gensets"
+  },
+  {
+   "source": "large_load_tariffs",
+   "target": "demand_response_by_data_centers",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "large_load_tariffs",
+   "target": "share_of_grid_costs_carried_by_other_customers",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "large_load_tariffs",
+   "target": "siting_attractiveness",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "frequency_and_voltage_stability",
+   "target": "large_load_tariffs",
+   "sign": "-",
+   "delay": false,
+   "note": "instability prompts ride-through and interconnection rules"
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "diesel_stored_and_burned",
+   "sign": "+",
+   "delay": false,
+   "note": "backup gensets, monthly tests"
+  },
+  {
+   "source": "diesel_stored_and_burned",
+   "target": "nitrogen_oxides",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "diesel_stored_and_burned",
+   "target": "fine_particulate_matter",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "diesel_stored_and_burned",
+   "target": "carbon_monoxide",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "diesel_stored_and_burned",
+   "target": "sulfur_dioxide",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "diesel_stored_and_burned",
+   "target": "fuel_and_oil_contamination",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "diesel_stored_and_burned",
+   "target": "intermittent_sound",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "diesel_stored_and_burned",
+   "target": "fire_risk",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "electricity_consumed",
+   "target": "gas_generation",
+   "sign": "+",
+   "delay": false,
+   "note": "gas is the usual marginal / new-build resource"
+  },
+  {
+   "source": "electricity_consumed",
+   "target": "coal_generation",
+   "sign": "+",
+   "delay": false,
+   "note": "delayed coal retirements"
+  },
+  {
+   "source": "gas_generation",
+   "target": "natural_gas_demand",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "natural_gas_demand",
+   "target": "methane",
+   "sign": "+",
+   "delay": false,
+   "note": "upstream leakage"
+  },
+  {
+   "source": "natural_gas_demand",
+   "target": "wholesale_energy_price",
+   "sign": "+",
+   "delay": false,
+   "note": "gas sets the marginal price"
+  },
+  {
+   "source": "natural_gas_demand",
+   "target": "exposure_to_supply_shocks",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "peak_load",
+   "target": "wholesale_energy_price",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "renewable_generation_and_storage",
+   "target": "wholesale_energy_price",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "renewable_generation_and_storage",
+   "target": "gas_generation",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clean_firm_generation_nuclear_geothermal",
+   "target": "gas_generation",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clean_energy_procurement",
+   "target": "renewable_generation_and_storage",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clean_energy_procurement",
+   "target": "clean_firm_generation_nuclear_geothermal",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clean_energy_procurement",
+   "target": "corporate_climate_targets",
+   "sign": "+",
+   "delay": false,
+   "note": "market-based accounting"
+  },
+  {
+   "source": "renewable_generation_and_storage",
+   "target": "land_held_for_power_lines_and_plants",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "renewable_generation_and_storage",
+   "target": "regional_self_sufficiency_in_power",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "gas_generation",
+   "target": "operational_co2",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "coal_generation",
+   "target": "operational_co2",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "gas_generation",
+   "target": "nitrogen_oxides",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "coal_generation",
+   "target": "sulfur_dioxide",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "coal_generation",
+   "target": "fine_particulate_matter",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "gas_generation",
+   "target": "water_embedded_in_electricity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "coal_generation",
+   "target": "water_embedded_in_electricity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clean_firm_generation_nuclear_geothermal",
+   "target": "water_embedded_in_electricity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "gas_generation",
+   "target": "water_temperature",
+   "sign": "+",
+   "delay": false,
+   "note": "thermal discharge"
+  },
+  {
+   "source": "gas_generation",
+   "target": "stranded_cost_exposure",
+   "sign": "+",
+   "delay": false,
+   "note": "long-lived plants for uncertain load"
+  },
+  {
+   "source": "certainty_of_future_load",
+   "target": "stranded_cost_exposure",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "wholesale_energy_price",
+   "target": "household_electricity_bills",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_price",
+   "target": "household_electricity_bills",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "share_of_grid_costs_carried_by_other_customers",
+   "target": "household_electricity_bills",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "household_electricity_bills",
+   "target": "large_load_tariffs",
+   "sign": "+",
+   "delay": false,
+   "note": "regulators respond to ratepayer pressure"
+  },
+  {
+   "source": "household_electricity_bills",
+   "target": "public_opinion",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "household_electricity_bills",
+   "target": "stress_and_anxiety",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "household_electricity_bills",
+   "target": "match_between_who_benefits_and_who_bears_costs",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "wholesale_energy_price",
+   "target": "siting_attractiveness",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "operational_co2",
+   "target": "atmospheric_greenhouse_gas_stock",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "embodied_co2",
+   "target": "atmospheric_greenhouse_gas_stock",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "methane",
+   "target": "atmospheric_greenhouse_gas_stock",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "atmospheric_greenhouse_gas_stock",
+   "target": "climate_change",
+   "sign": "+",
+   "delay": true,
+   "note": ""
+  },
+  {
+   "source": "climate_change",
+   "target": "pue",
+   "sign": "+",
+   "delay": false,
+   "note": "hotter ambient air means more cooling energy"
+  },
+  {
+   "source": "climate_change",
+   "target": "drought_and_water_scarcity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "climate_change",
+   "target": "resilience_to_extreme_heat",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "climate_change",
+   "target": "peak_day_water_demand",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "operational_co2",
+   "target": "state_and_national_climate_targets",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "operational_co2",
+   "target": "corporate_climate_targets",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "embodied_co2",
+   "target": "corporate_climate_targets",
+   "sign": "-",
+   "delay": false,
+   "note": "Scope 3"
+  },
+  {
+   "source": "corporate_climate_targets",
+   "target": "clean_energy_procurement",
+   "sign": "-",
+   "delay": false,
+   "note": "falling progress triggers procurement"
+  },
+  {
+   "source": "corporate_climate_targets",
+   "target": "fit_between_official_metrics_and_lived_experienc",
+   "sign": "-",
+   "delay": false,
+   "note": "paper progress vs local grid reality"
+  },
+  {
+   "source": "state_and_national_climate_targets",
+   "target": "clean_energy_standards",
+   "sign": "-",
+   "delay": false,
+   "note": "falling progress prompts policy"
+  },
+  {
+   "source": "clean_energy_standards",
+   "target": "renewable_generation_and_storage",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clean_energy_standards",
+   "target": "clean_firm_generation_nuclear_geothermal",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clean_energy_standards",
+   "target": "coal_generation",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "energy_saved_in_other_sectors",
+   "target": "state_and_national_climate_targets",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "energy_demand_induced_elsewhere",
+   "target": "state_and_national_climate_targets",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "energy_saved_in_other_sectors",
+   "target": "natural_gas_demand",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "energy_demand_induced_elsewhere",
+   "target": "natural_gas_demand",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "ai_adoption_and_usage",
+   "target": "energy_saved_in_other_sectors",
+   "sign": "+",
+   "delay": false,
+   "note": "optimisation of grids, buildings, logistics"
+  },
+  {
+   "source": "ai_adoption_and_usage",
+   "target": "energy_demand_induced_elsewhere",
+   "sign": "+",
+   "delay": false,
+   "note": "more consumption, e-commerce, extraction"
+  },
+  {
+   "source": "ai_adoption_and_usage",
+   "target": "productivity",
+   "sign": "+",
+   "delay": true,
+   "note": ""
+  },
+  {
+   "source": "productivity",
+   "target": "regional_output_and_income",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "air_temperature_around_sites",
+   "sign": "+",
+   "delay": false,
+   "note": "waste heat"
+  },
+  {
+   "source": "impervious_surface",
+   "target": "air_temperature_around_sites",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "heat_reuse",
+   "target": "air_temperature_around_sites",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "heat_reuse",
+   "target": "energy_saved_in_other_sectors",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "liquid_cooling_share",
+   "target": "heat_reuse",
+   "sign": "+",
+   "delay": false,
+   "note": "higher-grade heat is easier to reuse"
+  },
+  {
+   "source": "air_temperature_around_sites",
+   "target": "pue",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "water_lost_to_evaporation",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "evaporative_cooling_share",
+   "target": "water_lost_to_evaporation",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "evaporative_cooling_share",
+   "target": "pue",
+   "sign": "-",
+   "delay": false,
+   "note": "water-for-energy trade-off"
+  },
+  {
+   "source": "drought_and_water_scarcity",
+   "target": "evaporative_cooling_share",
+   "sign": "-",
+   "delay": false,
+   "note": "shift to dry / closed-loop cooling"
+  },
+  {
+   "source": "water_lost_to_evaporation",
+   "target": "municipal_supply_drawn",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "water_lost_to_evaporation",
+   "target": "peak_day_water_demand",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "water_lost_to_evaporation",
+   "target": "salinity_and_dissolved_solids",
+   "sign": "+",
+   "delay": false,
+   "note": "blowdown concentrates solids"
+  },
+  {
+   "source": "evaporative_cooling_share",
+   "target": "treatment_chemicals_and_biocides",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "treatment_chemicals_and_biocides",
+   "target": "metals_in_discharge_water",
+   "sign": "+",
+   "delay": false,
+   "note": "zinc / copper corrosion inhibitors"
+  },
+  {
+   "source": "treatment_chemicals_and_biocides",
+   "target": "wastewater_plant_load",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "salinity_and_dissolved_solids",
+   "target": "wastewater_plant_load",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "wastewater_plant_load",
+   "target": "public_service_and_infrastructure_spending",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "reclaimed_water_in_use",
+   "target": "municipal_supply_drawn",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "water_price",
+   "target": "reclaimed_water_in_use",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "water_price",
+   "target": "siting_attractiveness",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "municipal_supply_drawn",
+   "target": "utility_supply_capacity",
+   "sign": "-",
+   "delay": false,
+   "note": "remaining headroom"
+  },
+  {
+   "source": "municipal_supply_drawn",
+   "target": "groundwater_level",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "municipal_supply_drawn",
+   "target": "river_and_stream_flow",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "municipal_supply_drawn",
+   "target": "allocation_among_water_users",
+   "sign": "-",
+   "delay": false,
+   "note": "less for farms and households"
+  },
+  {
+   "source": "municipal_supply_drawn",
+   "target": "public_service_and_infrastructure_spending",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "utility_supply_capacity",
+   "target": "water_price",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "utility_supply_capacity",
+   "target": "room_for_other_businesses_to_grow",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "peak_day_water_demand",
+   "target": "utility_supply_capacity",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "water_embedded_in_electricity",
+   "target": "river_and_stream_flow",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "water_embedded_in_hardware",
+   "target": "drought_and_water_scarcity",
+   "sign": "+",
+   "delay": false,
+   "note": "in water-stressed fab regions"
+  },
+  {
+   "source": "drought_and_water_scarcity",
+   "target": "chip_and_equipment_supply",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "drought_and_water_scarcity",
+   "target": "water_price",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "groundwater_level",
+   "target": "drought_and_water_scarcity",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "groundwater_recharge",
+   "target": "groundwater_level",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "allocation_among_water_users",
+   "target": "conflict_and_organised_opposition",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "water_temperature",
+   "sign": "+",
+   "delay": false,
+   "note": "warm discharge"
+  },
+  {
+   "source": "water_temperature",
+   "target": "birds_and_wildlife",
+   "sign": "-",
+   "delay": false,
+   "note": "aquatic life"
+  },
+  {
+   "source": "fuel_and_oil_contamination",
+   "target": "exposure_to_hazardous_materials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "sediment_and_runoff",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "impervious_surface",
+   "target": "sediment_and_runoff",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "sediment_and_runoff",
+   "target": "wetlands_and_streams",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "impervious_surface",
+   "target": "groundwater_recharge",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "farmland",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "forest_and_green_space",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "wetlands_and_streams",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "impervious_surface",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "reused_industrial_land",
+   "sign": "+",
+   "delay": false,
+   "note": "brownfield sites"
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "archaeological_sites",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "cemeteries",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "historic_landscapes_and_viewsheds",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "visual_character",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "public_access_to_open_space",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "road_traffic",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "duration_of_construction",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "intermittent_sound",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "construction_employment",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capacity_under_construction",
+   "target": "land_availability",
+   "sign": "-",
+   "delay": false,
+   "note": "parcels used up"
+  },
+  {
+   "source": "land_held_for_power_lines_and_plants",
+   "target": "farmland",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "land_held_for_power_lines_and_plants",
+   "target": "habitat_extent_and_connectivity",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "land_held_for_power_lines_and_plants",
+   "target": "visual_character",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "land_held_for_power_lines_and_plants",
+   "target": "security_of_land_tenure",
+   "sign": "-",
+   "delay": false,
+   "note": "eminent domain"
+  },
+  {
+   "source": "land_held_for_power_lines_and_plants",
+   "target": "birds_and_wildlife",
+   "sign": "-",
+   "delay": false,
+   "note": "collisions"
+  },
+  {
+   "source": "forest_and_green_space",
+   "target": "habitat_extent_and_connectivity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "wetlands_and_streams",
+   "target": "habitat_extent_and_connectivity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "farmland",
+   "target": "rural_or_residential_character",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "farmland",
+   "target": "regional_identity",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "habitat_extent_and_connectivity",
+   "target": "birds_and_wildlife",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "night_time_light",
+   "target": "birds_and_wildlife",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "continuous_sound_level",
+   "target": "birds_and_wildlife",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "security_of_land_tenure",
+   "target": "fear_for_the_community_s_future",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "visual_character",
+   "target": "property_values",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "visual_character",
+   "target": "rural_or_residential_character",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_access_to_open_space",
+   "target": "use_of_home_and_outdoor_space",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "reused_industrial_land",
+   "target": "siting_attractiveness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "land_availability",
+   "target": "siting_attractiveness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "zoning_limits_and_moratoria",
+   "target": "land_availability",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "continuous_sound_level",
+   "sign": "+",
+   "delay": false,
+   "note": "chillers, fans, transformers"
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "low_frequency_sound",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "night_time_light",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "duration_of_construction",
+   "target": "daily_routines",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "duration_of_construction",
+   "target": "stress_and_anxiety",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "road_traffic",
+   "target": "emergency_vehicle_access",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "road_traffic",
+   "target": "fine_particulate_matter",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "road_traffic",
+   "target": "daily_routines",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "continuous_sound_level",
+   "target": "sleep",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "low_frequency_sound",
+   "target": "sleep",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "low_frequency_sound",
+   "target": "stress_and_anxiety",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "intermittent_sound",
+   "target": "sleep",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "night_time_light",
+   "target": "sleep",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "night_time_light",
+   "target": "rural_or_residential_character",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "continuous_sound_level",
+   "target": "use_of_home_and_outdoor_space",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "continuous_sound_level",
+   "target": "property_values",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "sleep",
+   "target": "stress_and_anxiety",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "use_of_home_and_outdoor_space",
+   "target": "stress_and_anxiety",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "daily_routines",
+   "target": "stress_and_anxiety",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "stress_and_anxiety",
+   "target": "conflict_and_organised_opposition",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "nitrogen_oxides",
+   "target": "respiratory_illness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fine_particulate_matter",
+   "target": "respiratory_illness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "sulfur_dioxide",
+   "target": "respiratory_illness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "carbon_monoxide",
+   "target": "respiratory_illness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fine_particulate_matter",
+   "target": "premature_death",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "resilience_to_extreme_heat",
+   "target": "premature_death",
+   "sign": "-",
+   "delay": false,
+   "note": "heat-wave blackouts"
+  },
+  {
+   "source": "respiratory_illness",
+   "target": "cost_of_health_damage",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "premature_death",
+   "target": "cost_of_health_damage",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "cost_of_health_damage",
+   "target": "match_between_who_benefits_and_who_bears_costs",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "fire_risk",
+   "sign": "+",
+   "delay": false,
+   "note": "lithium-ion UPS / BESS"
+  },
+  {
+   "source": "emergency_vehicle_access",
+   "target": "fire_risk",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fire_risk",
+   "target": "exposure_to_hazardous_materials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fire_risk",
+   "target": "public_service_and_infrastructure_spending",
+   "sign": "+",
+   "delay": false,
+   "note": "fire / hazmat capacity"
+  },
+  {
+   "source": "hazardous_waste",
+   "target": "exposure_to_hazardous_materials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "contamination_at_disposal_sites",
+   "target": "exposure_to_hazardous_materials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "exposure_to_hazardous_materials",
+   "target": "distribution_of_exposure_across_places_and_group",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "bargaining_power_relative_to_developers",
+   "target": "distribution_of_exposure_across_places_and_group",
+   "sign": "-",
+   "delay": false,
+   "note": "burdens land on low-power places"
+  },
+  {
+   "source": "attention_to_cumulative_and_regional_effects",
+   "target": "distribution_of_exposure_across_places_and_group",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "distribution_of_exposure_across_places_and_group",
+   "target": "match_between_who_benefits_and_who_bears_costs",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "operations_employment",
+   "sign": "+",
+   "delay": false,
+   "note": "small per MW"
+  },
+  {
+   "source": "construction_employment",
+   "target": "availability_of_skilled_trades",
+   "sign": "-",
+   "delay": false,
+   "note": "short-run drain on electricians, linemen"
+  },
+  {
+   "source": "construction_employment",
+   "target": "hope_for_jobs_and_renewal",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "construction_employment",
+   "target": "regional_output_and_income",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "operations_employment",
+   "target": "regional_output_and_income",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "operations_employment",
+   "target": "job_quality_and_local_share_of_jobs",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "availability_of_skilled_trades",
+   "target": "installed_it_capacity",
+   "sign": "+",
+   "delay": false,
+   "note": "speeds commissioning"
+  },
+  {
+   "source": "availability_of_skilled_trades",
+   "target": "room_for_other_businesses_to_grow",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "job_quality_and_local_share_of_jobs",
+   "target": "sense_that_promises_are_kept",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "job_quality_and_local_share_of_jobs",
+   "target": "hope_for_jobs_and_renewal",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "local_tax_revenue",
+   "sign": "+",
+   "delay": false,
+   "note": "property and equipment tax"
+  },
+  {
+   "source": "data_center_tax_incentives",
+   "target": "state_tax_revenue_forgone",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "data_center_tax_incentives",
+   "target": "siting_attractiveness",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "data_center_tax_incentives",
+   "target": "value_kept_by_host_regions_and_countries",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "state_tax_revenue_forgone",
+   "target": "public_service_and_infrastructure_spending",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "local_tax_revenue",
+   "target": "fiscal_dependence_on_one_industry",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "local_tax_revenue",
+   "target": "public_service_and_infrastructure_spending",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "local_tax_revenue",
+   "target": "public_opinion",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "local_tax_revenue",
+   "target": "value_kept_by_host_regions_and_countries",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fiscal_dependence_on_one_industry",
+   "target": "data_center_tax_incentives",
+   "sign": "+",
+   "delay": false,
+   "note": "protect the tax base"
+  },
+  {
+   "source": "fiscal_dependence_on_one_industry",
+   "target": "zoning_limits_and_moratoria",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fiscal_dependence_on_one_industry",
+   "target": "local_control_over_land_use",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capital_investment",
+   "target": "regional_output_and_income",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "capital_investment",
+   "target": "investment_share_of_growth",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "investment_share_of_growth",
+   "target": "investor_expectations",
+   "sign": "+",
+   "delay": false,
+   "note": "macro narrative"
+  },
+  {
+   "source": "regional_output_and_income",
+   "target": "property_values",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "property_values",
+   "target": "local_tax_revenue",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "connectivity",
+   "sign": "+",
+   "delay": false,
+   "note": "fibre, IXPs"
+  },
+  {
+   "source": "connectivity",
+   "target": "siting_attractiveness",
+   "sign": "+",
+   "delay": false,
+   "note": "latency and ecosystem"
+  },
+  {
+   "source": "bargaining_power_relative_to_developers",
+   "target": "value_kept_by_host_regions_and_countries",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "bargaining_power_relative_to_developers",
+   "target": "community_benefit_agreements",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "value_kept_by_host_regions_and_countries",
+   "target": "match_between_who_benefits_and_who_bears_costs",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "community_benefit_agreements",
+   "target": "sense_that_promises_are_kept",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "community_benefit_agreements",
+   "target": "value_kept_by_host_regions_and_countries",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "developer_secrecy",
+   "target": "public_availability_of_project_information",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "developer_secrecy",
+   "target": "public_availability_of_contract_terms",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "developer_secrecy",
+   "target": "trust_in_developers_and_officials",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "developer_secrecy",
+   "target": "visibility_of_infrastructure_and_its_labour",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "developer_secrecy",
+   "target": "community_say_in_decisions",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "disclosure_rules",
+   "target": "public_data_on_energy_and_water_use",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "disclosure_rules",
+   "target": "public_availability_of_contract_terms",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "disclosure_rules",
+   "target": "developer_secrecy",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_availability_of_project_information",
+   "target": "community_say_in_decisions",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_availability_of_project_information",
+   "target": "quality_of_information_in_public_debate",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_availability_of_contract_terms",
+   "target": "bargaining_power_relative_to_developers",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_availability_of_contract_terms",
+   "target": "trust_in_developers_and_officials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_data_on_energy_and_water_use",
+   "target": "fit_between_official_metrics_and_lived_experienc",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_data_on_energy_and_water_use",
+   "target": "visibility_of_infrastructure_and_its_labour",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "public_data_on_energy_and_water_use",
+   "target": "certainty_of_future_load",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "visibility_of_infrastructure_and_its_labour",
+   "target": "quality_of_information_in_public_debate",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "visibility_of_infrastructure_and_its_labour",
+   "target": "physical_attack_on_facilities",
+   "sign": "+",
+   "delay": false,
+   "note": "transparency vs security tension"
+  },
+  {
+   "source": "quality_of_information_in_public_debate",
+   "target": "attention_to_cumulative_and_regional_effects",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fit_between_official_metrics_and_lived_experienc",
+   "target": "trust_in_developers_and_officials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "sense_that_promises_are_kept",
+   "target": "trust_in_developers_and_officials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "community_say_in_decisions",
+   "target": "trust_in_developers_and_officials",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "community_say_in_decisions",
+   "target": "attention_to_cumulative_and_regional_effects",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "clarity_about_who_has_authority",
+   "target": "community_say_in_decisions",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "local_control_over_land_use",
+   "target": "zoning_limits_and_moratoria",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "attention_to_cumulative_and_regional_effects",
+   "target": "zoning_limits_and_moratoria",
+   "sign": "+",
+   "delay": false,
+   "note": "regional siting rules"
+  },
+  {
+   "source": "trust_in_developers_and_officials",
+   "target": "conflict_and_organised_opposition",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "match_between_who_benefits_and_who_bears_costs",
+   "target": "conflict_and_organised_opposition",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "hope_for_jobs_and_renewal",
+   "target": "public_opinion",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fear_for_the_community_s_future",
+   "target": "public_opinion",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "fear_for_the_community_s_future",
+   "target": "conflict_and_organised_opposition",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "rural_or_residential_character",
+   "target": "fear_for_the_community_s_future",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "regional_identity",
+   "target": "fear_for_the_community_s_future",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "relation_to_earlier_industrial_and_extractive_hi",
+   "target": "fear_for_the_community_s_future",
+   "sign": "+",
+   "delay": false,
+   "note": "'we've seen this before'"
+  },
+  {
+   "source": "relation_to_earlier_industrial_and_extractive_hi",
+   "target": "hope_for_jobs_and_renewal",
+   "sign": "+",
+   "delay": false,
+   "note": "post-industrial towns seek renewal"
+  },
+  {
+   "source": "public_opinion",
+   "target": "conflict_and_organised_opposition",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "conflict_and_organised_opposition",
+   "target": "zoning_limits_and_moratoria",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "conflict_and_organised_opposition",
+   "target": "permitting_speed",
+   "sign": "-",
+   "delay": false,
+   "note": "hearings, lawsuits"
+  },
+  {
+   "source": "conflict_and_organised_opposition",
+   "target": "disclosure_rules",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "conflict_and_organised_opposition",
+   "target": "developer_secrecy",
+   "sign": "+",
+   "delay": false,
+   "note": "developers hide plans to avoid opposition"
+  },
+  {
+   "source": "conflict_and_organised_opposition",
+   "target": "bargaining_power_relative_to_developers",
+   "sign": "+",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "conflict_and_organised_opposition",
+   "target": "planned_pipeline",
+   "sign": "-",
+   "delay": false,
+   "note": "cancellations"
+  },
+  {
+   "source": "zoning_limits_and_moratoria",
+   "target": "permitting_speed",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "physical_attack_on_facilities",
+   "sign": "+",
+   "delay": false,
+   "note": "higher-value target"
+  },
+  {
+   "source": "physical_attack_on_facilities",
+   "target": "developer_secrecy",
+   "sign": "+",
+   "delay": false,
+   "note": "security justifies opacity"
+  },
+  {
+   "source": "installed_it_capacity",
+   "target": "cyberattack_on_energy_systems",
+   "sign": "+",
+   "delay": false,
+   "note": "larger attack surface"
+  },
+  {
+   "source": "flexibility_available_to_grid_operators",
+   "target": "cyberattack_on_energy_systems",
+   "sign": "+",
+   "delay": false,
+   "note": "more digitally controlled load"
+  },
+  {
+   "source": "cyberattack_on_energy_systems",
+   "target": "frequency_and_voltage_stability",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "peak_load",
+   "target": "regional_self_sufficiency_in_power",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "regional_self_sufficiency_in_power",
+   "target": "exposure_to_supply_shocks",
+   "sign": "-",
+   "delay": false,
+   "note": ""
+  },
+  {
+   "source": "national_compute_capacity",
+   "target": "supplier_concentration",
+   "sign": "+",
+   "delay": false,
+   "note": "more demand on the same few suppliers"
+  }
+ ],
+ "loops": [
+  {
+   "id": "R1",
+   "name": "AI boom flywheel",
+   "type": "R",
+   "nodes": [
+    "ai_capability",
+    "ai_adoption_and_usage",
+    "ai_and_cloud_revenue",
+    "investor_expectations",
+    "data_center_capex",
+    "planned_pipeline",
+    "capacity_under_construction",
+    "installed_it_capacity",
+    "national_compute_capacity"
+   ],
+   "story": "Better models drive use and revenue, which validates investor belief, funds capex, and adds the compute that trains the next models. The engine of the build-out; long delays (permitting, construction, training) make it prone to overshoot."
+  },
+  {
+   "id": "R2",
+   "name": "Scale and efficiency rebound",
+   "type": "R",
+   "nodes": [
+    "cost_per_unit_of_compute",
+    "reinvestment_of_efficiency_gains_in_more_computi",
+    "demand_for_compute",
+    "planned_pipeline",
+    "capacity_under_construction",
+    "installed_it_capacity"
+   ],
+   "story": "Scale and efficiency cut the cost of compute; cheaper compute is reinvested in larger models and more usage, so total electricity rises even as energy per operation falls (Jevons)."
+  },
+  {
+   "id": "R3",
+   "name": "Hub clustering",
+   "type": "R",
+   "nodes": [
+    "installed_it_capacity",
+    "connectivity",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction"
+   ],
+   "story": "Fibre, interconnection points and a supplier ecosystem make existing hubs more attractive, concentrating load and local impacts."
+  },
+  {
+   "id": "R4",
+   "name": "Fiscal capture",
+   "type": "R",
+   "nodes": [
+    "installed_it_capacity",
+    "local_tax_revenue",
+    "fiscal_dependence_on_one_industry",
+    "data_center_tax_incentives",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction"
+   ],
+   "story": "Tax revenue makes the host dependent on the industry, which sustains incentives and weakens appetite to restrict it, bringing more projects."
+  },
+  {
+   "id": "R5",
+   "name": "Secrecy\u2013distrust spiral",
+   "type": "R",
+   "nodes": [
+    "developer_secrecy",
+    "trust_in_developers_and_officials",
+    "conflict_and_organised_opposition"
+   ],
+   "story": "NDAs and code-named projects erode trust; opposition grows; developers become more secretive to avoid it."
+  },
+  {
+   "id": "R6",
+   "name": "Bring-your-own-power",
+   "type": "R",
+   "nodes": [
+    "peak_load",
+    "interconnection_queue",
+    "grid_connection_wait_time",
+    "generation_outside_the_public_grid",
+    "power_availability_at_site",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction",
+    "installed_it_capacity"
+   ],
+   "story": "Grid queues push developers to on-site gas turbines, which restores power availability and lets the build-out continue \u2013 moving emissions, noise and regulatory ambiguity to the fence line."
+  },
+  {
+   "id": "R7",
+   "name": "Warming raises cooling load",
+   "type": "R",
+   "nodes": [
+    "electricity_consumed",
+    "gas_generation",
+    "operational_co2",
+    "atmospheric_greenhouse_gas_stock",
+    "climate_change",
+    "pue"
+   ],
+   "story": "Fossil-supplied load adds to warming; hotter ambient air raises cooling energy. Weak and slow globally, but locally visible in heat waves."
+  },
+  {
+   "id": "R8",
+   "name": "Utility rate-base growth",
+   "type": "R",
+   "nodes": [
+    "utility_grid_investment",
+    "utility_rate_base",
+    "utility_financial_health"
+   ],
+   "story": "Regulated utilities earn a return on capital, so large-load growth is an incentive to build \u2013 costs that ratepayers may carry if load does not materialise."
+  },
+  {
+   "id": "R9",
+   "name": "Circular supply security",
+   "type": "R",
+   "nodes": [
+    "hardware_purchases",
+    "hardware_kept_in_use",
+    "hardware_retirement",
+    "material_recovery_from_retired_hardware",
+    "secondary_material_supply",
+    "exposure_to_supply_shocks",
+    "chip_and_equipment_supply"
+   ],
+   "story": "Recovering metals from retired servers lowers supply-shock exposure, easing hardware supply. Today this loop is weak because recovery rates for Ga, REE and other critical metals are low."
+  },
+  {
+   "id": "R10",
+   "name": "Jobs promise",
+   "type": "R",
+   "nodes": [
+    "hope_for_jobs_and_renewal",
+    "public_opinion",
+    "conflict_and_organised_opposition",
+    "zoning_limits_and_moratoria",
+    "land_availability",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction",
+    "construction_employment"
+   ],
+   "story": "Construction jobs build hope and support, easing approvals for further projects. Can flip if operations jobs (few per MW) fall short of promises."
+  },
+  {
+   "id": "B1",
+   "name": "Grid queue brake",
+   "type": "B",
+   "nodes": [
+    "installed_it_capacity",
+    "peak_load",
+    "interconnection_queue",
+    "grid_connection_wait_time",
+    "power_availability_at_site",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction"
+   ],
+   "story": "Load fills the interconnection queue; waits lengthen; sites lose power availability and the pipeline slows. The main physical brake on growth today."
+  },
+  {
+   "id": "B2",
+   "name": "Power price brake",
+   "type": "B",
+   "nodes": [
+    "installed_it_capacity",
+    "peak_load",
+    "wholesale_energy_price",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction"
+   ],
+   "story": "Rising wholesale prices make a region less attractive for new load."
+  },
+  {
+   "id": "B3",
+   "name": "Ratepayer backlash",
+   "type": "B",
+   "nodes": [
+    "household_electricity_bills",
+    "large_load_tariffs",
+    "share_of_grid_costs_carried_by_other_customers"
+   ],
+   "story": "Rising bills push regulators to large-load tariffs that shift grid costs back to data centers."
+  },
+  {
+   "id": "B4",
+   "name": "Tariffs slow growth",
+   "type": "B",
+   "nodes": [
+    "installed_it_capacity",
+    "peak_load",
+    "utility_grid_investment",
+    "utility_rate_base",
+    "household_electricity_bills",
+    "large_load_tariffs",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction"
+   ],
+   "story": "The same ratepayer response also makes a region less attractive, slowing new projects."
+  },
+  {
+   "id": "B5",
+   "name": "Neighbour pushback",
+   "type": "B",
+   "nodes": [
+    "installed_it_capacity",
+    "continuous_sound_level",
+    "sleep",
+    "stress_and_anxiety",
+    "conflict_and_organised_opposition",
+    "zoning_limits_and_moratoria",
+    "land_availability",
+    "siting_attractiveness",
+    "planned_pipeline",
+    "capacity_under_construction"
+   ],
+   "story": "Noise, light and disruption mobilise residents into opposition, leading to zoning limits and moratoria."
+  },
+  {
+   "id": "B6",
+   "name": "Water scarcity shifts cooling",
+   "type": "B",
+   "nodes": [
+    "water_lost_to_evaporation",
+    "municipal_supply_drawn",
+    "groundwater_level",
+    "drought_and_water_scarcity",
+    "evaporative_cooling_share"
+   ],
+   "story": "Evaporative cooling draws down local water; scarcity pushes operators to dry or closed-loop cooling \u2013 which raises PUE and electricity use (problem shifting to the grid)."
+  },
+  {
+   "id": "B7",
+   "name": "Corporate clean procurement",
+   "type": "B",
+   "nodes": [
+    "clean_energy_procurement",
+    "renewable_generation_and_storage",
+    "gas_generation",
+    "operational_co2",
+    "corporate_climate_targets"
+   ],
+   "story": "Falling progress toward corporate targets triggers PPAs and clean firm deals. Strength depends on additionality and hourly matching."
+  },
+  {
+   "id": "B8",
+   "name": "Public clean energy standards",
+   "type": "B",
+   "nodes": [
+    "operational_co2",
+    "state_and_national_climate_targets",
+    "clean_energy_standards",
+    "coal_generation"
+   ],
+   "story": "Missed state targets prompt clean energy standards that retire coal \u2013 if policy responds."
+  },
+  {
+   "id": "B9",
+   "name": "Leverage limits capex",
+   "type": "B",
+   "nodes": [
+    "data_center_capex",
+    "debt_and_financial_exposure",
+    "cost_of_capital"
+   ],
+   "story": "Debt-financed build-out raises risk premia and the cost of capital, slowing further capex \u2013 the financial brake on overshoot."
+  },
+  {
+   "id": "B10",
+   "name": "Mineral cost brake",
+   "type": "B",
+   "nodes": [
+    "hardware_purchases",
+    "gallium",
+    "critical_mineral_prices",
+    "cost_per_unit_of_compute",
+    "reinvestment_of_efficiency_gains_in_more_computi",
+    "demand_for_compute",
+    "planned_pipeline",
+    "capacity_under_construction",
+    "installed_it_capacity"
+   ],
+   "story": "Hardware demand tightens critical-mineral markets, raising compute costs and damping demand."
+  },
+  {
+   "id": "B11",
+   "name": "Fab water constraint",
+   "type": "B",
+   "nodes": [
+    "hardware_purchases",
+    "water_embedded_in_hardware",
+    "drought_and_water_scarcity",
+    "chip_and_equipment_supply"
+   ],
+   "story": "Chip fabs in water-stressed regions compete for water; droughts constrain chip supply."
+  },
+  {
+   "id": "B12",
+   "name": "Disclosure rebuilds trust",
+   "type": "B",
+   "nodes": [
+    "conflict_and_organised_opposition",
+    "disclosure_rules",
+    "public_availability_of_contract_terms",
+    "trust_in_developers_and_officials"
+   ],
+   "story": "Opposition wins disclosure rules; published contracts rebuild trust and dampen conflict."
+  },
+  {
+   "id": "B13",
+   "name": "Security\u2013transparency tension",
+   "type": "B",
+   "nodes": [
+    "developer_secrecy",
+    "visibility_of_infrastructure_and_its_labour",
+    "physical_attack_on_facilities"
+   ],
+   "story": "Attack risk justifies secrecy, which lowers visibility (and attack risk) \u2013 while feeding the R5 distrust spiral."
+  },
+  {
+   "id": "B14",
+   "name": "Skilled-trades bottleneck",
+   "type": "B",
+   "nodes": [
+    "capacity_under_construction",
+    "construction_employment",
+    "availability_of_skilled_trades",
+    "installed_it_capacity",
+    "connectivity",
+    "siting_attractiveness",
+    "planned_pipeline"
+   ],
+   "story": "A construction boom drains electricians and linemen, slowing commissioning and, through it, the attraction of new projects. Also crowds out housing, grid and factory construction."
+  }
+ ],
+ "components": [
+  {
+   "system": "Site and building",
+   "name": "Site works and land clearing",
+   "impacts": [
+    "farmland",
+    "forest_and_green_space",
+    "wetlands_and_streams",
+    "impervious_surface",
+    "sediment_and_runoff",
+    "habitat_extent_and_connectivity",
+    "archaeological_sites",
+    "cemeteries",
+    "road_traffic",
+    "duration_of_construction",
+    "intermittent_sound",
+    "construction_employment",
+    "embodied_co2"
+   ]
+  },
+  {
+   "system": "Site and building",
+   "name": "Building shell (concrete, steel)",
+   "impacts": [
+    "embodied_co2",
+    "visual_character",
+    "historic_landscapes_and_viewsheds",
+    "impervious_surface",
+    "construction_employment",
+    "property_values",
+    "local_tax_revenue",
+    "availability_of_skilled_trades"
+   ]
+  },
+  {
+   "system": "Site and building",
+   "name": "Perimeter, security and lighting",
+   "impacts": [
+    "night_time_light",
+    "birds_and_wildlife",
+    "visual_character",
+    "public_access_to_open_space",
+    "physical_attack_on_facilities",
+    "visibility_of_infrastructure_and_its_labour"
+   ]
+  },
+  {
+   "system": "Power",
+   "name": "Grid interconnection and substation",
+   "impacts": [
+    "substation_and_distribution_capacity",
+    "connection_headroom_for_other_users",
+    "peak_load",
+    "availability_of_grid_equipment",
+    "copper_and_aluminium",
+    "land_held_for_power_lines_and_plants",
+    "low_frequency_sound",
+    "interconnection_queue"
+   ]
+  },
+  {
+   "system": "Power",
+   "name": "New transmission lines",
+   "impacts": [
+    "transmission_capacity",
+    "land_held_for_power_lines_and_plants",
+    "security_of_land_tenure",
+    "visual_character",
+    "birds_and_wildlife",
+    "household_electricity_bills",
+    "share_of_grid_costs_carried_by_other_customers",
+    "copper_and_aluminium",
+    "historic_landscapes_and_viewsheds"
+   ]
+  },
+  {
+   "system": "Power",
+   "name": "Transformers and switchgear",
+   "impacts": [
+    "availability_of_grid_equipment",
+    "copper_and_aluminium",
+    "continuous_sound_level",
+    "low_frequency_sound",
+    "fire_risk"
+   ]
+  },
+  {
+   "system": "Power",
+   "name": "UPS and battery storage",
+   "impacts": [
+    "battery_minerals",
+    "fire_risk",
+    "exposure_to_hazardous_materials",
+    "hazardous_waste",
+    "frequency_and_voltage_stability",
+    "flexibility_available_to_grid_operators"
+   ]
+  },
+  {
+   "system": "Power",
+   "name": "Backup diesel generators",
+   "impacts": [
+    "diesel_stored_and_burned",
+    "nitrogen_oxides",
+    "fine_particulate_matter",
+    "carbon_monoxide",
+    "sulfur_dioxide",
+    "intermittent_sound",
+    "low_frequency_sound",
+    "fuel_and_oil_contamination",
+    "fire_risk",
+    "respiratory_illness",
+    "distribution_of_exposure_across_places_and_group"
+   ]
+  },
+  {
+   "system": "Power",
+   "name": "On-site gas turbines / fuel cells",
+   "impacts": [
+    "generation_outside_the_public_grid",
+    "natural_gas_demand",
+    "methane",
+    "operational_co2",
+    "nitrogen_oxides",
+    "continuous_sound_level",
+    "low_frequency_sound",
+    "clarity_about_who_has_authority",
+    "regional_self_sufficiency_in_power",
+    "stranded_cost_exposure"
+   ]
+  },
+  {
+   "system": "Power",
+   "name": "On-site solar and storage",
+   "impacts": [
+    "renewable_generation_and_storage",
+    "battery_minerals",
+    "land_held_for_power_lines_and_plants",
+    "corporate_climate_targets"
+   ]
+  },
+  {
+   "system": "IT equipment",
+   "name": "GPU / accelerator servers",
+   "impacts": [
+    "electricity_consumed",
+    "peak_load",
+    "speed_of_load_swings",
+    "semiconductors_and_memory",
+    "gallium",
+    "embodied_co2",
+    "water_embedded_in_hardware",
+    "electronic_waste",
+    "supplier_concentration",
+    "openness_of_trade_in_minerals_and_equipment",
+    "national_compute_capacity",
+    "local_tax_revenue",
+    "hardware_kept_in_use",
+    "capital_investment",
+    "debt_and_financial_exposure"
+   ]
+  },
+  {
+   "system": "IT equipment",
+   "name": "CPU servers and storage",
+   "impacts": [
+    "electricity_consumed",
+    "semiconductors_and_memory",
+    "rare_earths",
+    "embodied_co2",
+    "electronic_waste",
+    "hardware_kept_in_use",
+    "hazardous_waste"
+   ]
+  },
+  {
+   "system": "IT equipment",
+   "name": "Networking and fibre",
+   "impacts": [
+    "connectivity",
+    "copper_and_aluminium",
+    "gallium",
+    "semiconductors_and_memory",
+    "electronic_waste"
+   ]
+  },
+  {
+   "system": "Cooling and water",
+   "name": "Chillers and air handlers",
+   "impacts": [
+    "electricity_consumed",
+    "peak_load",
+    "continuous_sound_level",
+    "low_frequency_sound",
+    "air_temperature_around_sites",
+    "operational_co2"
+   ]
+  },
+  {
+   "system": "Cooling and water",
+   "name": "Evaporative cooling towers",
+   "impacts": [
+    "water_lost_to_evaporation",
+    "municipal_supply_drawn",
+    "peak_day_water_demand",
+    "salinity_and_dissolved_solids",
+    "treatment_chemicals_and_biocides",
+    "metals_in_discharge_water",
+    "wastewater_plant_load",
+    "continuous_sound_level",
+    "allocation_among_water_users",
+    "groundwater_level"
+   ]
+  },
+  {
+   "system": "Cooling and water",
+   "name": "Dry coolers",
+   "impacts": [
+    "electricity_consumed",
+    "peak_load",
+    "continuous_sound_level",
+    "air_temperature_around_sites",
+    "resilience_to_extreme_heat"
+   ]
+  },
+  {
+   "system": "Cooling and water",
+   "name": "Direct-to-chip / immersion liquid cooling",
+   "impacts": [
+    "electricity_consumed",
+    "exposure_to_hazardous_materials",
+    "hazardous_waste",
+    "energy_saved_in_other_sectors"
+   ]
+  },
+  {
+   "system": "Cooling and water",
+   "name": "Water treatment and discharge",
+   "impacts": [
+    "treatment_chemicals_and_biocides",
+    "metals_in_discharge_water",
+    "salinity_and_dissolved_solids",
+    "water_temperature",
+    "wastewater_plant_load",
+    "reclaimed_water_in_use"
+   ]
+  },
+  {
+   "system": "Cooling and water",
+   "name": "Heat rejection and reuse",
+   "impacts": [
+    "energy_saved_in_other_sectors",
+    "air_temperature_around_sites",
+    "water_temperature"
+   ]
+  },
+  {
+   "system": "People, contracts and end of life",
+   "name": "Operations staff",
+   "impacts": [
+    "operations_employment",
+    "job_quality_and_local_share_of_jobs",
+    "road_traffic",
+    "visibility_of_infrastructure_and_its_labour"
+   ]
+  },
+  {
+   "system": "People, contracts and end of life",
+   "name": "Development agreements (NDAs, tax deals, CBAs)",
+   "impacts": [
+    "public_availability_of_project_information",
+    "public_availability_of_contract_terms",
+    "state_tax_revenue_forgone",
+    "local_tax_revenue",
+    "trust_in_developers_and_officials",
+    "bargaining_power_relative_to_developers",
+    "sense_that_promises_are_kept",
+    "clarity_about_who_has_authority",
+    "community_say_in_decisions",
+    "value_kept_by_host_regions_and_countries"
+   ]
+  },
+  {
+   "system": "People, contracts and end of life",
+   "name": "Metering and reporting",
+   "impacts": [
+    "public_data_on_energy_and_water_use",
+    "fit_between_official_metrics_and_lived_experienc",
+    "quality_of_information_in_public_debate",
+    "corporate_climate_targets",
+    "certainty_of_future_load"
+   ]
+  },
+  {
+   "system": "People, contracts and end of life",
+   "name": "Decommissioning and IT asset disposition",
+   "impacts": [
+    "electronic_waste",
+    "hardware_kept_in_use",
+    "waste_traded_across_borders",
+    "contamination_at_disposal_sites",
+    "hazardous_waste",
+    "mining_pressure_on_land_and_communities"
+   ]
+  }
+ ],
+ "sfd": [
+  {
+   "id": "capacity",
+   "title": "Data center capacity (MW)",
+   "note": "Ageing chain from announcement to retirement. Delays here drive overshoot.",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "pipe",
+     "S",
+     1,
+     0,
+     "Planned pipeline"
+    ],
+    [
+     "uc",
+     "S",
+     2,
+     0,
+     "Capacity under construction"
+    ],
+    [
+     "inst",
+     "S",
+     3,
+     0,
+     "Installed IT capacity"
+    ],
+    [
+     "c1",
+     "C",
+     4,
+     0
+    ],
+    [
+     "cx",
+     "C",
+     1,
+     1
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "pipe",
+     "Project announcements",
+     [
+      "Investor expectations",
+      "Demand for compute",
+      "Siting attractiveness"
+     ]
+    ],
+    [
+     "pipe",
+     "uc",
+     "Construction starts",
+     [
+      "Permitting speed",
+      "Power availability at site",
+      "Zoning limits and moratoria"
+     ]
+    ],
+    [
+     "uc",
+     "inst",
+     "Commissioning",
+     [
+      "Availability of skilled trades",
+      "Availability of grid equipment"
+     ]
+    ],
+    [
+     "inst",
+     "c1",
+     "Decommissioning",
+     [
+      "Server refresh rate"
+     ]
+    ],
+    [
+     "pipe",
+     "cx",
+     "Cancellations",
+     [
+      "Conflict and organised opposition",
+      "Grid connection wait time",
+      "Cost of capital"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "hardware",
+   "title": "Hardware and materials (dMFA)",
+   "note": "Units or tonnes of metal. Recovery closes the loop back to supply.",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "use",
+     "S",
+     1,
+     0,
+     "Hardware kept in use"
+    ],
+    [
+     "ret",
+     "S",
+     2,
+     0,
+     "Retired hardware (stock)"
+    ],
+    [
+     "sec",
+     "S",
+     3,
+     0,
+     "Secondary material supply"
+    ],
+    [
+     "land",
+     "C",
+     2,
+     1
+    ],
+    [
+     "c1",
+     "C",
+     4,
+     0
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "use",
+     "Hardware purchases",
+     [
+      "Installed IT capacity",
+      "Server refresh rate",
+      "Chip and equipment supply"
+     ]
+    ],
+    [
+     "use",
+     "ret",
+     "Hardware retirement",
+     [
+      "Server refresh rate",
+      "Chip energy efficiency"
+     ]
+    ],
+    [
+     "ret",
+     "use",
+     "Reuse and refurbishment",
+     [
+      "Critical mineral prices"
+     ]
+    ],
+    [
+     "ret",
+     "sec",
+     "Material recovery",
+     [
+      "Material recovery from retired hardware",
+      "Critical mineral prices"
+     ]
+    ],
+    [
+     "ret",
+     "land",
+     "Landfill and export (e-waste)",
+     [
+      "Electronic waste",
+      "Waste traded across borders"
+     ]
+    ],
+    [
+     "sec",
+     "c1",
+     "Re-entry into manufacturing",
+     [
+      "Exposure to supply shocks"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "grid",
+   "title": "Grid access and generation",
+   "note": "GW of queued load, generation capacity by type, and the utility rate base ($).",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "q",
+     "S",
+     1,
+     0,
+     "Interconnection queue"
+    ],
+    [
+     "conn",
+     "S",
+     2,
+     0,
+     "Connected large load"
+    ],
+    [
+     "cw",
+     "C",
+     1,
+     1
+    ],
+    [
+     "c2",
+     "C",
+     0,
+     2
+    ],
+    [
+     "gen",
+     "S",
+     1,
+     2,
+     "Generation capacity by type"
+    ],
+    [
+     "c3",
+     "C",
+     2,
+     2
+    ],
+    [
+     "c4",
+     "C",
+     0,
+     3
+    ],
+    [
+     "rb",
+     "S",
+     1,
+     3,
+     "Utility rate base"
+    ],
+    [
+     "c5",
+     "C",
+     2,
+     3
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "q",
+     "Interconnection requests",
+     [
+      "Planned pipeline",
+      "Peak load"
+     ]
+    ],
+    [
+     "q",
+     "conn",
+     "Connection approvals",
+     [
+      "Transmission capacity",
+      "Substation and distribution capacity",
+      "Flexibility available to grid operators"
+     ]
+    ],
+    [
+     "q",
+     "cw",
+     "Withdrawn requests",
+     [
+      "Grid connection wait time",
+      "Large-load tariffs"
+     ]
+    ],
+    [
+     "c2",
+     "gen",
+     "Capacity additions",
+     [
+      "Peak load",
+      "Clean energy procurement",
+      "Clean energy standards"
+     ]
+    ],
+    [
+     "gen",
+     "c3",
+     "Retirements",
+     [
+      "Clean energy standards",
+      "Electricity consumed (delays)"
+     ]
+    ],
+    [
+     "c4",
+     "rb",
+     "Utility grid investment",
+     [
+      "Peak load",
+      "Utility financial health"
+     ]
+    ],
+    [
+     "rb",
+     "c5",
+     "Depreciation recovered through bills",
+     [
+      "Household electricity bills",
+      "Large-load tariffs"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "carbon",
+   "title": "Carbon",
+   "note": "Emissions are flows; the atmosphere integrates them.",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     1
+    ],
+    [
+     "ghg",
+     "S",
+     1,
+     1,
+     "Atmospheric greenhouse gas stock"
+    ],
+    [
+     "c1",
+     "C",
+     2,
+     1
+    ],
+    [
+     "c2",
+     "C",
+     1,
+     0
+    ],
+    [
+     "c3",
+     "C",
+     1,
+     2
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "ghg",
+     "Operational emissions",
+     [
+      "Gas generation",
+      "Coal generation",
+      "Generation outside the public grid",
+      "Diesel stored and burned"
+     ]
+    ],
+    [
+     "c2",
+     "ghg",
+     "Embodied emissions",
+     [
+      "Hardware purchases",
+      "Capacity under construction"
+     ]
+    ],
+    [
+     "c3",
+     "ghg",
+     "Methane leakage",
+     [
+      "Natural gas demand"
+     ]
+    ],
+    [
+     "ghg",
+     "c1",
+     "Natural removal (very slow)",
+     []
+    ]
+   ]
+  },
+  {
+   "id": "water",
+   "title": "Water",
+   "note": "Aquifer storage with competing withdrawals; reclaimed water substitutes for potable draw.",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "aq",
+     "S",
+     1,
+     0,
+     "Groundwater level (aquifer storage)"
+    ],
+    [
+     "c1",
+     "C",
+     2,
+     0
+    ],
+    [
+     "c2",
+     "C",
+     2,
+     1
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "aq",
+     "Groundwater recharge",
+     [
+      "Impervious surface",
+      "Climate change"
+     ]
+    ],
+    [
+     "aq",
+     "c1",
+     "Data center withdrawals",
+     [
+      "Water lost to evaporation",
+      "Evaporative cooling share",
+      "Reclaimed water in use"
+     ]
+    ],
+    [
+     "aq",
+     "c2",
+     "Other users' withdrawals",
+     [
+      "Allocation among water users",
+      "Drought and water scarcity"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "land",
+   "title": "Land",
+   "note": "Conversion is effectively irreversible on planning timescales.",
+   "nodes": [
+    [
+     "und",
+     "S",
+     0,
+     0,
+     "Undeveloped land (farm, forest, wetland)"
+    ],
+    [
+     "dc",
+     "S",
+     1,
+     0,
+     "Land developed for data centers"
+    ],
+    [
+     "pl",
+     "S",
+     1,
+     1,
+     "Land held for power lines and plants"
+    ]
+   ],
+   "flows": [
+    [
+     "und",
+     "dc",
+     "Site conversion",
+     [
+      "Capacity under construction",
+      "Zoning limits and moratoria",
+      "Reused industrial land"
+     ]
+    ],
+    [
+     "und",
+     "pl",
+     "Corridor acquisition",
+     [
+      "Utility grid investment",
+      "Renewable generation and storage",
+      "Security of land tenure"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "labour",
+   "title": "Skilled workforce",
+   "note": "Electricians, linemen, pipefitters shared with housing, grid and manufacturing.",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "tr",
+     "S",
+     1,
+     0,
+     "Availability of skilled trades"
+    ],
+    [
+     "c1",
+     "C",
+     2,
+     0
+    ],
+    [
+     "c2",
+     "C",
+     1,
+     1
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "tr",
+     "Training and apprenticeships",
+     [
+      "Construction employment (long run)",
+      "Public service and infrastructure spending"
+     ]
+    ],
+    [
+     "tr",
+     "c1",
+     "Absorbed by data center construction",
+     [
+      "Construction employment"
+     ]
+    ],
+    [
+     "tr",
+     "c2",
+     "Retirement and exit",
+     []
+    ]
+   ]
+  },
+  {
+   "id": "fiscal",
+   "title": "Local tax base",
+   "note": "Server equipment depreciates much faster than buildings, so equipment tax revenue can fall off unless hardware is refreshed (schedule to source).",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "tb",
+     "S",
+     1,
+     0,
+     "Taxable data center property"
+    ],
+    [
+     "c1",
+     "C",
+     2,
+     0
+    ],
+    [
+     "c2",
+     "C",
+     1,
+     1
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "tb",
+     "New taxable buildings and equipment",
+     [
+      "Installed IT capacity",
+      "Hardware purchases"
+     ]
+    ],
+    [
+     "tb",
+     "c1",
+     "Equipment depreciation",
+     [
+      "Server refresh rate"
+     ]
+    ],
+    [
+     "tb",
+     "c2",
+     "Abatements",
+     [
+      "Data center tax incentives"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "finance",
+   "title": "Capital and expectations",
+   "note": "Soft stocks that drive capex; the overshoot risk lives here.",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "ie",
+     "S",
+     1,
+     0,
+     "Investor expectations"
+    ],
+    [
+     "c1",
+     "C",
+     2,
+     0
+    ],
+    [
+     "c2",
+     "C",
+     0,
+     1
+    ],
+    [
+     "debt",
+     "S",
+     1,
+     1,
+     "Debt and financial exposure"
+    ],
+    [
+     "c3",
+     "C",
+     2,
+     1
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "ie",
+     "Narrative building",
+     [
+      "AI and cloud revenue",
+      "Investment share of growth"
+     ]
+    ],
+    [
+     "ie",
+     "c1",
+     "Disappointment",
+     [
+      "Server utilization",
+      "Cost of capital"
+     ]
+    ],
+    [
+     "c2",
+     "debt",
+     "Borrowing for capex",
+     [
+      "Data center capex"
+     ]
+    ],
+    [
+     "debt",
+     "c3",
+     "Repayment from revenue",
+     [
+      "AI and cloud revenue"
+     ]
+    ]
+   ]
+  },
+  {
+   "id": "social",
+   "title": "Trust and opposition",
+   "note": "Soft stocks that change slowly and gate permitting.",
+   "nodes": [
+    [
+     "c0",
+     "C",
+     0,
+     0
+    ],
+    [
+     "tr",
+     "S",
+     1,
+     0,
+     "Trust in developers and officials"
+    ],
+    [
+     "c1",
+     "C",
+     2,
+     0
+    ],
+    [
+     "c2",
+     "C",
+     0,
+     1
+    ],
+    [
+     "op",
+     "S",
+     1,
+     1,
+     "Conflict and organised opposition"
+    ],
+    [
+     "c3",
+     "C",
+     2,
+     1
+    ]
+   ],
+   "flows": [
+    [
+     "c0",
+     "tr",
+     "Trust building",
+     [
+      "Sense that promises are kept",
+      "Public availability of contract terms",
+      "Community say in decisions"
+     ]
+    ],
+    [
+     "tr",
+     "c1",
+     "Trust erosion",
+     [
+      "Developer secrecy",
+      "Household electricity bills",
+      "Fit between official metrics and lived experience"
+     ]
+    ],
+    [
+     "c2",
+     "op",
+     "Mobilisation",
+     [
+      "Stress and anxiety",
+      "Fear for the community's future",
+      "Allocation among water users"
+     ]
+    ],
+    [
+     "op",
+     "c3",
+     "Resolution or fatigue",
+     [
+      "Community benefit agreements",
+      "Trust in developers and officials"
+     ]
+    ]
+   ]
+  }
+ ]
+}
