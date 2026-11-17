@@ -1,0 +1,192 @@
+Label,ID,Type,Domain,Subgroup,SD role,Knowability,Note
+Electricity consumed,electricity_consumed,Impact,Electricity system,Demand on the grid,flow,Measured or counted,
+Peak load,peak_load,Impact,Electricity system,Demand on the grid,aux,Measured or counted,
+Speed of load swings,speed_of_load_swings,Impact,Electricity system,Demand on the grid,aux,Measured or counted,
+Certainty of future load,certainty_of_future_load,Impact,Electricity system,Demand on the grid,aux,"Modelled, estimated or anticipated",
+Gas generation,gas_generation,Impact,Electricity system,Generation mix,aux,Measured or counted,
+Coal generation,coal_generation,Impact,Electricity system,Generation mix,aux,Measured or counted,
+Renewable generation and storage,renewable_generation_and_storage,Impact,Electricity system,Generation mix,stock,Measured or counted,
+"Clean firm generation (nuclear, geothermal)",clean_firm_generation_nuclear_geothermal,Impact,Electricity system,Generation mix,stock,Measured or counted,
+Generation outside the public grid,generation_outside_the_public_grid,Impact,Electricity system,Generation mix,stock,Measured or counted,
+Transmission capacity,transmission_capacity,Impact,Electricity system,Network capacity,stock,Measured or counted,
+Substation and distribution capacity,substation_and_distribution_capacity,Impact,Electricity system,Network capacity,stock,Measured or counted,
+Connection headroom for other users,connection_headroom_for_other_users,Impact,Electricity system,Network capacity,aux,"Modelled, estimated or anticipated",
+Availability of grid equipment,availability_of_grid_equipment,Impact,Electricity system,Network capacity,aux,Measured or counted,
+Reserve margin,reserve_margin,Impact,Electricity system,Reliability,aux,"Modelled, estimated or anticipated",
+Frequency and voltage stability,frequency_and_voltage_stability,Impact,Electricity system,Reliability,aux,Measured or counted,
+Flexibility available to grid operators,flexibility_available_to_grid_operators,Impact,Electricity system,Reliability,aux,"Modelled, estimated or anticipated",
+Wholesale energy price,wholesale_energy_price,Impact,Electricity system,Price and who pays,aux,Measured or counted,
+Capacity price,capacity_price,Impact,Electricity system,Price and who pays,aux,Measured or counted,
+Household electricity bills,household_electricity_bills,Impact,Electricity system,Price and who pays,aux,Measured or counted,
+Share of grid costs carried by other customers,share_of_grid_costs_carried_by_other_customers,Impact,Electricity system,Price and who pays,aux,Relational or contested,
+Stranded-cost exposure,stranded_cost_exposure,Impact,Electricity system,Price and who pays,aux,"Modelled, estimated or anticipated",
+Utility financial health,utility_financial_health,Impact,Electricity system,Price and who pays,aux,Measured or counted,
+Natural gas demand,natural_gas_demand,Impact,Electricity system,Fuels,flow,Measured or counted,
+Diesel stored and burned,diesel_stored_and_burned,Impact,Electricity system,Fuels,flow,Measured or counted,
+Operational CO2,operational_co2,Impact,Atmosphere and climate,Greenhouse gases,flow,"Modelled, estimated or anticipated",
+Embodied CO2,embodied_co2,Impact,Atmosphere and climate,Greenhouse gases,flow,"Modelled, estimated or anticipated",
+Methane,methane,Impact,Atmosphere and climate,Greenhouse gases,flow,"Modelled, estimated or anticipated",
+State and national climate targets,state_and_national_climate_targets,Impact,Atmosphere and climate,Greenhouse gases,aux,Measured or counted,
+Corporate climate targets,corporate_climate_targets,Impact,Atmosphere and climate,Greenhouse gases,aux,Relational or contested,
+Nitrogen oxides,nitrogen_oxides,Impact,Atmosphere and climate,Local air,flow,Measured or counted,
+Fine particulate matter,fine_particulate_matter,Impact,Atmosphere and climate,Local air,flow,Measured or counted,
+Sulfur dioxide,sulfur_dioxide,Impact,Atmosphere and climate,Local air,flow,Measured or counted,
+Carbon monoxide,carbon_monoxide,Impact,Atmosphere and climate,Local air,flow,Measured or counted,
+Air temperature around sites,air_temperature_around_sites,Impact,Atmosphere and climate,Local heat,aux,Measured or counted,
+Municipal supply drawn,municipal_supply_drawn,Impact,Water,Quantity,flow,Measured or counted,
+Groundwater level,groundwater_level,Impact,Water,Quantity,stock,Measured or counted,
+River and stream flow,river_and_stream_flow,Impact,Water,Quantity,aux,Measured or counted,
+Reclaimed water in use,reclaimed_water_in_use,Impact,Water,Quantity,flow,Measured or counted,
+Water lost to evaporation,water_lost_to_evaporation,Impact,Water,Quantity,flow,"Modelled, estimated or anticipated",
+Peak-day water demand,peak_day_water_demand,Impact,Water,Quantity,aux,Measured or counted,
+Water embedded in electricity,water_embedded_in_electricity,Impact,Water,Quantity,aux,"Modelled, estimated or anticipated",
+Water embedded in hardware,water_embedded_in_hardware,Impact,Water,Quantity,aux,"Modelled, estimated or anticipated",
+Salinity and dissolved solids,salinity_and_dissolved_solids,Impact,Water,Quality,aux,Measured or counted,
+Treatment chemicals and biocides,treatment_chemicals_and_biocides,Impact,Water,Quality,aux,Measured or counted,
+Metals in discharge water,metals_in_discharge_water,Impact,Water,Quality,aux,Measured or counted,
+Water temperature,water_temperature,Impact,Water,Quality,aux,Measured or counted,
+Sediment and runoff,sediment_and_runoff,Impact,Water,Quality,aux,Measured or counted,
+Fuel and oil contamination,fuel_and_oil_contamination,Impact,Water,Quality,aux,Measured or counted,
+Utility supply capacity,utility_supply_capacity,Impact,Water,Water systems,aux,Measured or counted,
+Wastewater plant load,wastewater_plant_load,Impact,Water,Water systems,aux,Measured or counted,
+Water price,water_price,Impact,Water,Water systems,aux,Measured or counted,
+Allocation among water users,allocation_among_water_users,Impact,Water,Water systems,aux,Relational or contested,
+Farmland,farmland,Impact,Land and living systems,Land cover,stock,Measured or counted,
+Forest and green space,forest_and_green_space,Impact,Land and living systems,Land cover,stock,Measured or counted,
+Wetlands and streams,wetlands_and_streams,Impact,Land and living systems,Land cover,stock,Measured or counted,
+Impervious surface,impervious_surface,Impact,Land and living systems,Land cover,stock,Measured or counted,
+Reused industrial land,reused_industrial_land,Impact,Land and living systems,Land cover,stock,Measured or counted,
+Land held for power lines and plants,land_held_for_power_lines_and_plants,Impact,Land and living systems,Land cover,stock,Measured or counted,
+Habitat extent and connectivity,habitat_extent_and_connectivity,Impact,Land and living systems,Living systems,stock,"Modelled, estimated or anticipated",
+Birds and wildlife,birds_and_wildlife,Impact,Land and living systems,Living systems,aux,"Modelled, estimated or anticipated",
+Groundwater recharge,groundwater_recharge,Impact,Land and living systems,Living systems,flow,"Modelled, estimated or anticipated",
+Archaeological sites,archaeological_sites,Impact,Land and living systems,Heritage,aux,Qualitative or experienced,
+Cemeteries,cemeteries,Impact,Land and living systems,Heritage,aux,Qualitative or experienced,
+Historic landscapes and viewsheds,historic_landscapes_and_viewsheds,Impact,Land and living systems,Heritage,aux,Qualitative or experienced,
+Visual character,visual_character,Impact,Land and living systems,Landscape and access,aux,Qualitative or experienced,
+Public access to open space,public_access_to_open_space,Impact,Land and living systems,Landscape and access,aux,Measured or counted,
+Security of land tenure,security_of_land_tenure,Impact,Land and living systems,Landscape and access,aux,Relational or contested,
+Copper and aluminium,copper_and_aluminium,Impact,Materials and waste,Material demand,flow,"Modelled, estimated or anticipated",
+Gallium,gallium,Impact,Materials and waste,Material demand,flow,"Modelled, estimated or anticipated",
+Rare earths,rare_earths,Impact,Materials and waste,Material demand,flow,"Modelled, estimated or anticipated",
+Battery minerals,battery_minerals,Impact,Materials and waste,Material demand,flow,"Modelled, estimated or anticipated",
+Semiconductors and memory,semiconductors_and_memory,Impact,Materials and waste,Material demand,flow,"Modelled, estimated or anticipated",
+Mining pressure on land and communities,mining_pressure_on_land_and_communities,Impact,Materials and waste,Source regions,aux,Relational or contested,
+Electronic waste,electronic_waste,Impact,Materials and waste,Waste,flow,"Modelled, estimated or anticipated",
+Hazardous waste,hazardous_waste,Impact,Materials and waste,Waste,flow,Measured or counted,
+Hardware kept in use,hardware_kept_in_use,Impact,Materials and waste,Waste,stock,"Modelled, estimated or anticipated",
+Waste traded across borders,waste_traded_across_borders,Impact,Materials and waste,Waste,flow,"Modelled, estimated or anticipated",
+Contamination at disposal sites,contamination_at_disposal_sites,Impact,Materials and waste,Waste,stock,Measured or counted,
+Continuous sound level,continuous_sound_level,Impact,Sensory environment,Sound,aux,Measured or counted,
+Low-frequency sound,low_frequency_sound,Impact,Sensory environment,Sound,aux,Measured or counted,
+Intermittent sound,intermittent_sound,Impact,Sensory environment,Sound,aux,Measured or counted,
+Night-time light,night_time_light,Impact,Sensory environment,Light,aux,Measured or counted,
+Road traffic,road_traffic,Impact,Sensory environment,Movement,aux,Measured or counted,
+Duration of construction,duration_of_construction,Impact,Sensory environment,Movement,aux,Measured or counted,
+Respiratory illness,respiratory_illness,Impact,Health and safety,Physical health,aux,"Modelled, estimated or anticipated",
+Premature death,premature_death,Impact,Health and safety,Physical health,aux,"Modelled, estimated or anticipated",
+Cost of health damage,cost_of_health_damage,Impact,Health and safety,Physical health,aux,"Modelled, estimated or anticipated",
+Sleep,sleep,Impact,Health and safety,Rest and mental health,aux,Qualitative or experienced,
+Stress and anxiety,stress_and_anxiety,Impact,Health and safety,Rest and mental health,aux,Qualitative or experienced,
+Fire risk,fire_risk,Impact,Health and safety,Safety,aux,"Modelled, estimated or anticipated",
+Exposure to hazardous materials,exposure_to_hazardous_materials,Impact,Health and safety,Safety,aux,"Modelled, estimated or anticipated",
+Emergency vehicle access,emergency_vehicle_access,Impact,Health and safety,Safety,aux,Qualitative or experienced,
+Distribution of exposure across places and groups,distribution_of_exposure_across_places_and_group,Impact,Health and safety,Who is exposed,aux,Relational or contested,
+Construction employment,construction_employment,Impact,Economy and public finance,Work,aux,Measured or counted,
+Operations employment,operations_employment,Impact,Economy and public finance,Work,aux,Measured or counted,
+Supply-chain employment,supply_chain_employment,Impact,Economy and public finance,Work,aux,"Modelled, estimated or anticipated",
+Job quality and local share of jobs,job_quality_and_local_share_of_jobs,Impact,Economy and public finance,Work,aux,Qualitative or experienced,
+Availability of skilled trades,availability_of_skilled_trades,Impact,Economy and public finance,Work,stock,Measured or counted,
+Local tax revenue,local_tax_revenue,Impact,Economy and public finance,Public money,flow,Measured or counted,
+State tax revenue forgone,state_tax_revenue_forgone,Impact,Economy and public finance,Public money,flow,Measured or counted,
+Public service and infrastructure spending,public_service_and_infrastructure_spending,Impact,Economy and public finance,Public money,flow,Measured or counted,
+Fiscal dependence on one industry,fiscal_dependence_on_one_industry,Impact,Economy and public finance,Public money,aux,Measured or counted,
+Capital investment,capital_investment,Impact,Economy and public finance,Local economy,flow,Measured or counted,
+Regional output and income,regional_output_and_income,Impact,Economy and public finance,Local economy,aux,"Modelled, estimated or anticipated",
+Room for other businesses to grow,room_for_other_businesses_to_grow,Impact,Economy and public finance,Local economy,aux,Relational or contested,
+Property values,property_values,Impact,Economy and public finance,Local economy,aux,Measured or counted,
+Connectivity,connectivity,Impact,Economy and public finance,Local economy,aux,Measured or counted,
+Investment share of growth,investment_share_of_growth,Impact,Economy and public finance,Wider economy,aux,"Modelled, estimated or anticipated",
+Debt and financial exposure,debt_and_financial_exposure,Impact,Economy and public finance,Wider economy,stock,Measured or counted,
+Productivity,productivity,Impact,Economy and public finance,Wider economy,aux,"Modelled, estimated or anticipated",
+Value kept by host regions and countries,value_kept_by_host_regions_and_countries,Impact,Economy and public finance,Wider economy,aux,"Modelled, estimated or anticipated",
+Use of home and outdoor space,use_of_home_and_outdoor_space,Impact,Community life and place,Everyday life,aux,Qualitative or experienced,
+Daily routines,daily_routines,Impact,Community life and place,Everyday life,aux,Qualitative or experienced,
+Rural or residential character,rural_or_residential_character,Impact,Community life and place,Place,aux,Qualitative or experienced,
+Regional identity,regional_identity,Impact,Community life and place,Place,aux,Qualitative or experienced,
+Relation to earlier industrial and extractive history,relation_to_earlier_industrial_and_extractive_hi,Impact,Community life and place,Place,aux,Relational or contested,
+Hope for jobs and renewal,hope_for_jobs_and_renewal,Impact,Community life and place,Outlook,aux,Qualitative or experienced,
+Fear for the community's future,fear_for_the_community_s_future,Impact,Community life and place,Outlook,aux,Qualitative or experienced,
+Sense that promises are kept,sense_that_promises_are_kept,Impact,Community life and place,Outlook,aux,Relational or contested,
+Trust in developers and officials,trust_in_developers_and_officials,Impact,Community life and place,Social relations,stock,Qualitative or experienced,
+Conflict and organised opposition,conflict_and_organised_opposition,Impact,Community life and place,Social relations,stock,Measured or counted,
+Public opinion,public_opinion,Impact,Community life and place,Social relations,aux,Measured or counted,
+Local control over land use,local_control_over_land_use,Impact,Power and knowledge,Voice,aux,Relational or contested,
+Community say in decisions,community_say_in_decisions,Impact,Power and knowledge,Voice,aux,Relational or contested,
+Bargaining power relative to developers,bargaining_power_relative_to_developers,Impact,Power and knowledge,Voice,aux,Relational or contested,
+Clarity about who has authority,clarity_about_who_has_authority,Impact,Power and knowledge,Voice,aux,Relational or contested,
+Public availability of project information,public_availability_of_project_information,Impact,Power and knowledge,Openness,aux,Measured or counted,
+Public availability of contract terms,public_availability_of_contract_terms,Impact,Power and knowledge,Openness,aux,Measured or counted,
+Public data on energy and water use,public_data_on_energy_and_water_use,Impact,Power and knowledge,Openness,aux,Measured or counted,
+Fit between official metrics and lived experience,fit_between_official_metrics_and_lived_experienc,Impact,Power and knowledge,Knowing,aux,Relational or contested,
+Visibility of infrastructure and its labour,visibility_of_infrastructure_and_its_labour,Impact,Power and knowledge,Knowing,aux,Qualitative or experienced,
+Quality of information in public debate,quality_of_information_in_public_debate,Impact,Power and knowledge,Knowing,aux,Relational or contested,
+Match between who benefits and who bears costs,match_between_who_benefits_and_who_bears_costs,Impact,Power and knowledge,Fairness,aux,Relational or contested,
+Attention to cumulative and regional effects,attention_to_cumulative_and_regional_effects,Impact,Power and knowledge,Fairness,aux,Relational or contested,
+National compute capacity,national_compute_capacity,Impact,Security,Strategic position,stock,Measured or counted,
+Supplier concentration,supplier_concentration,Impact,Security,Strategic position,aux,Measured or counted,
+Openness of trade in minerals and equipment,openness_of_trade_in_minerals_and_equipment,Impact,Security,Strategic position,aux,Measured or counted,
+Regional self-sufficiency in power,regional_self_sufficiency_in_power,Impact,Security,Energy security,aux,"Modelled, estimated or anticipated",
+Exposure to supply shocks,exposure_to_supply_shocks,Impact,Security,Energy security,aux,"Modelled, estimated or anticipated",
+Physical attack on facilities,physical_attack_on_facilities,Impact,Security,Threats,aux,"Modelled, estimated or anticipated",
+Cyberattack on energy systems,cyberattack_on_energy_systems,Impact,Security,Threats,aux,"Modelled, estimated or anticipated",
+Resilience to extreme heat,resilience_to_extreme_heat,Impact,Security,Threats,aux,"Modelled, estimated or anticipated",
+Energy saved in other sectors,energy_saved_in_other_sectors,Impact,Feedbacks from the services provided,Energy feedbacks,aux,"Modelled, estimated or anticipated",
+Energy demand induced elsewhere,energy_demand_induced_elsewhere,Impact,Feedbacks from the services provided,Energy feedbacks,aux,"Modelled, estimated or anticipated",
+Reinvestment of efficiency gains in more computing,reinvestment_of_efficiency_gains_in_more_computi,Impact,Feedbacks from the services provided,Energy feedbacks,aux,"Modelled, estimated or anticipated",
+AI capability,ai_capability,Driver,Demand and technology,,aux,,What frontier and deployed models can do
+AI adoption and usage,ai_adoption_and_usage,Driver,Demand and technology,,aux,,"Users, queries, enterprise integration"
+Demand for compute,demand_for_compute,Driver,Demand and technology,,aux,,Training + inference + cloud workloads
+AI and cloud revenue,ai_and_cloud_revenue,Driver,Demand and technology,,flow,,Money returned by compute services
+Chip energy efficiency,chip_energy_efficiency,Driver,Demand and technology,,aux,,Compute per watt of new hardware (exogenous trend)
+Model and software efficiency,model_and_software_efficiency,Driver,Demand and technology,,aux,,"Algorithmic gains, quantisation, distillation"
+Cost per unit of compute,cost_per_unit_of_compute,Driver,Demand and technology,,aux,,All-in $ per useful FLOP
+Chip and equipment supply,chip_and_equipment_supply,Driver,Demand and technology,,aux,,"Fab, packaging, HBM and grid-equipment throughput"
+Critical mineral prices,critical_mineral_prices,Driver,Demand and technology,,aux,,"Ga, REE, Cu, Li price signal"
+Investor expectations,investor_expectations,Driver,Data center decisions,,stock,,Accumulated belief in future AI returns
+Data center capex,data_center_capex,Driver,Data center decisions,,flow,,"Hyperscaler, neocloud and developer spending"
+Planned pipeline,planned_pipeline,Driver,Data center decisions,,stock,,Announced / permitted MW not yet under construction
+Capacity under construction,capacity_under_construction,Driver,Data center decisions,,stock,,MW being built
+Installed IT capacity,installed_it_capacity,Driver,Data center decisions,,stock,,Operating MW of IT load
+Hardware purchases,hardware_purchases,Driver,Data center decisions,,flow,,"Servers, GPUs, storage, network bought per year"
+Hardware retirement,hardware_retirement,Driver,Data center decisions,,flow,,Servers leaving service per year
+Server refresh rate,server_refresh_rate,Driver,Data center decisions,,aux,,1 / average service life
+Server utilization,server_utilization,Driver,Data center decisions,,aux,,Share of capacity doing useful work
+Rack power density,rack_power_density,Driver,Data center decisions,,aux,,kW per rack
+PUE,pue,Driver,Data center decisions,,aux,,Facility energy / IT energy
+Evaporative cooling share,evaporative_cooling_share,Driver,Data center decisions,,aux,,Share of heat rejected by evaporating water
+Liquid cooling share,liquid_cooling_share,Driver,Data center decisions,,aux,,Direct-to-chip / immersion share
+Heat reuse,heat_reuse,Driver,Data center decisions,,aux,,"Waste heat exported to district heating, greenhouses"
+Demand response by data centers,demand_response_by_data_centers,Driver,Data center decisions,,aux,,Willingness to curtail / shift load
+Clean energy procurement,clean_energy_procurement,Driver,Data center decisions,,aux,,"PPAs, 24/7 CFE deals, nuclear restarts"
+Developer secrecy,developer_secrecy,Driver,Data center decisions,,aux,,"NDAs, shell-company names, withheld data"
+Community benefit agreements,community_benefit_agreements,Driver,Data center decisions,,aux,,Binding commitments to host communities
+Material recovery from retired hardware,material_recovery_from_retired_hardware,Driver,Data center decisions,,flow,,"Reuse, refurbishment, metal recovery"
+Secondary material supply,secondary_material_supply,Driver,Data center decisions,,stock,,"Recovered Cu, Au, Ga, REE available to re-enter use"
+Siting attractiveness,siting_attractiveness,Driver,Siting and grid access,,aux,,Composite pull of a location
+Power availability at site,power_availability_at_site,Driver,Siting and grid access,,aux,,MW obtainable on a useful timeline
+Interconnection queue,interconnection_queue,Driver,Siting and grid access,,stock,,Large-load requests waiting for study / connection
+Grid connection wait time,grid_connection_wait_time,Driver,Siting and grid access,,aux,,Years from request to energisation
+Land availability,land_availability,Driver,Siting and grid access,,aux,,"Suitable, zoned, affordable parcels"
+Permitting speed,permitting_speed,Driver,Siting and grid access,,aux,,Speed of local/state approvals
+Utility grid investment,utility_grid_investment,Driver,Siting and grid access,,flow,,"Utility spending on wires, substations, plants"
+Utility rate base,utility_rate_base,Driver,Siting and grid access,,stock,,Undepreciated utility assets earning a return
+Data center tax incentives,data_center_tax_incentives,Driver,Policy and governance,,aux,,"Sales/use-tax exemptions, abatements"
+Zoning limits and moratoria,zoning_limits_and_moratoria,Driver,Policy and governance,,aux,,Local restrictions on where / whether DCs build
+Large-load tariffs,large_load_tariffs,Driver,Policy and governance,,aux,,"Rules making big loads pay for their grid costs, min. take, collateral"
+Disclosure rules,disclosure_rules,Driver,Policy and governance,,aux,,"Mandatory reporting of energy, water, contracts"
+Clean energy standards,clean_energy_standards,Driver,Policy and governance,,aux,,"RPS / CES, coal retirement policy"
+Cost of capital,cost_of_capital,Driver,External conditions,,aux,,Interest rates + risk premium
+Atmospheric greenhouse gas stock,atmospheric_greenhouse_gas_stock,Driver,External conditions,,stock,,Accumulated CO2e
+Climate change,climate_change,Driver,External conditions,,aux,,"Warming, heat waves, shifting rainfall"
+Drought and water scarcity,drought_and_water_scarcity,Driver,External conditions,,aux,,Local water stress

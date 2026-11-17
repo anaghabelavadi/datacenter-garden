@@ -1,0 +1,397 @@
+From,To,Polarity,Delay,Note
+AI capability,AI adoption and usage,+,,better models find more uses
+AI adoption and usage,Demand for compute,+,,inference load grows with use
+AI adoption and usage,AI and cloud revenue,+,,
+AI and cloud revenue,Investor expectations,+,,revenue validates the narrative
+Investor expectations,Data center capex,+,,
+Cost of capital,Data center capex,-,,
+Data center capex,Planned pipeline,+,,
+Data center capex,Capital investment,+,,
+Data center capex,Debt and financial exposure,+,,"bond, private-credit and lease financing"
+Debt and financial exposure,Cost of capital,+,,leverage raises risk premium
+Demand for compute,Planned pipeline,+,,
+Siting attractiveness,Planned pipeline,+,,where projects get proposed
+Planned pipeline,Capacity under construction,+,yes,construction starts
+Permitting speed,Capacity under construction,+,,
+Capacity under construction,Installed IT capacity,+,yes,commissioning (duration is an open question)
+Installed IT capacity,National compute capacity,+,,
+National compute capacity,AI capability,+,yes,more training compute
+Installed IT capacity,Cost per unit of compute,-,,scale economies
+Chip energy efficiency,Cost per unit of compute,-,,
+Model and software efficiency,Cost per unit of compute,-,,
+Server utilization,Cost per unit of compute,-,,
+Chip and equipment supply,Cost per unit of compute,-,,"scarcity premia on GPUs, HBM"
+Critical mineral prices,Cost per unit of compute,+,,
+Cost per unit of compute,Demand for compute,-,,price elasticity
+Cost per unit of compute,Reinvestment of efficiency gains in more computing,-,,cheaper compute is reinvested in bigger models
+Reinvestment of efficiency gains in more computing,Demand for compute,+,,rebound / Jevons
+Demand for compute,Electricity consumed,+,,
+Installed IT capacity,Electricity consumed,+,,
+Server utilization,Electricity consumed,+,,
+Chip energy efficiency,Electricity consumed,-,,per unit of compute
+Model and software efficiency,Electricity consumed,-,,per unit of service
+PUE,Electricity consumed,+,,
+Electricity consumed,Peak load,+,,
+Installed IT capacity,Peak load,+,,"contracted capacity, near-flat profile"
+Rack power density,Peak load,+,,
+Rack power density,Liquid cooling share,+,,above some density air cooling is no longer enough (threshold to source)
+Liquid cooling share,PUE,-,,
+Demand for compute,Speed of load swings,+,,synchronised GPU training steps swing tens of MW
+Rack power density,Speed of load swings,+,,
+Speed of load swings,Frequency and voltage stability,-,,
+Planned pipeline,Certainty of future load,-,,speculative and duplicate requests
+Interconnection queue,Certainty of future load,-,,
+Disclosure rules,Certainty of future load,+,,
+Chip energy efficiency,Server refresh rate,+,,newer chips make old ones uneconomic
+Server refresh rate,Hardware purchases,+,,
+Server refresh rate,Hardware retirement,+,,
+Installed IT capacity,Hardware purchases,+,,new halls must be filled
+Chip and equipment supply,Hardware purchases,+,,supply constraint
+Hardware purchases,Hardware kept in use,+,,inflow to in-use stock
+Hardware retirement,Hardware kept in use,-,,outflow from in-use stock
+Hardware kept in use,Hardware retirement,+,,"bigger fleet, more retirements"
+Hardware purchases,Embodied CO2,+,,
+Hardware purchases,Semiconductors and memory,+,,
+Hardware purchases,Gallium,+,,"GaN power, photonics"
+Hardware purchases,Rare earths,+,,"HDD magnets, fans"
+Hardware purchases,Copper and aluminium,+,,
+Hardware purchases,Water embedded in hardware,+,,fab ultrapure water
+Hardware purchases,Supply-chain employment,+,,
+Capacity under construction,Embodied CO2,+,,"concrete, steel"
+Installed IT capacity,Copper and aluminium,+,,"busbars, cable, transformers"
+Installed IT capacity,Battery minerals,+,,UPS and BESS
+Renewable generation and storage,Battery minerals,+,,
+Gallium,Critical mineral prices,+,,
+Rare earths,Critical mineral prices,+,,
+Copper and aluminium,Critical mineral prices,+,,
+Battery minerals,Critical mineral prices,+,,
+Gallium,Mining pressure on land and communities,+,,
+Rare earths,Mining pressure on land and communities,+,,
+Copper and aluminium,Mining pressure on land and communities,+,,
+Battery minerals,Mining pressure on land and communities,+,,
+Semiconductors and memory,Supplier concentration,+,,demand flows to a few fabs and HBM makers
+Supplier concentration,Exposure to supply shocks,+,,
+Openness of trade in minerals and equipment,Chip and equipment supply,+,,
+Exposure to supply shocks,Chip and equipment supply,-,,
+Hardware retirement,Electronic waste,+,,
+Hardware retirement,Material recovery from retired hardware,+,,
+Critical mineral prices,Material recovery from retired hardware,+,,recovery pays when prices rise
+Material recovery from retired hardware,Electronic waste,-,,
+Material recovery from retired hardware,Secondary material supply,+,,
+Secondary material supply,Mining pressure on land and communities,-,,
+Secondary material supply,Exposure to supply shocks,-,,
+Electronic waste,Waste traded across borders,+,,
+Electronic waste,Hazardous waste,+,,
+Electronic waste,Contamination at disposal sites,+,yes,
+Waste traded across borders,Distribution of exposure across places and groups,+,,burdens exported
+Copper and aluminium,Availability of grid equipment,-,,competition for the same metals
+Peak load,Utility grid investment,+,,
+Utility grid investment,Availability of grid equipment,-,,transformer and breaker backlogs
+Utility grid investment,Copper and aluminium,+,,
+Availability of grid equipment,Transmission capacity,+,yes,
+Availability of grid equipment,Substation and distribution capacity,+,yes,
+Utility grid investment,Transmission capacity,+,yes,
+Utility grid investment,Substation and distribution capacity,+,yes,
+Utility grid investment,Utility rate base,+,,
+Utility grid investment,Land held for power lines and plants,+,,
+Utility rate base,Household electricity bills,+,,
+Utility rate base,Utility financial health,+,,regulated return on assets
+Utility financial health,Utility grid investment,+,,
+Stranded-cost exposure,Utility financial health,-,,
+Planned pipeline,Interconnection queue,+,,
+Peak load,Interconnection queue,+,,
+Interconnection queue,Grid connection wait time,+,,
+Transmission capacity,Grid connection wait time,-,,
+Substation and distribution capacity,Grid connection wait time,-,,
+Flexibility available to grid operators,Grid connection wait time,-,,flexible / curtailable connections
+Grid connection wait time,Power availability at site,-,,
+Grid connection wait time,Generation outside the public grid,+,,bring-your-own-power
+Generation outside the public grid,Power availability at site,+,,
+Generation outside the public grid,Natural gas demand,+,,
+Generation outside the public grid,Nitrogen oxides,+,,
+Generation outside the public grid,Continuous sound level,+,,
+Generation outside the public grid,Low-frequency sound,+,,
+Generation outside the public grid,Clarity about who has authority,-,,regulatory grey zone between utility and air permits
+Generation outside the public grid,Distribution of exposure across places and groups,+,,
+Power availability at site,Siting attractiveness,+,,
+Peak load,Connection headroom for other users,-,,
+Connection headroom for other users,Room for other businesses to grow,+,,
+Peak load,Reserve margin,-,,
+Flexibility available to grid operators,Reserve margin,+,,
+Reserve margin,Capacity price,-,,
+Reserve margin,Regional self-sufficiency in power,+,,
+Reserve margin,Resilience to extreme heat,+,,
+Peak load,Resilience to extreme heat,-,,
+Demand response by data centers,Flexibility available to grid operators,+,,
+Demand response by data centers,Diesel stored and burned,+,,if curtailment runs on backup gensets
+Large-load tariffs,Demand response by data centers,+,,
+Large-load tariffs,Share of grid costs carried by other customers,-,,
+Large-load tariffs,Siting attractiveness,-,,
+Frequency and voltage stability,Large-load tariffs,-,,instability prompts ride-through and interconnection rules
+Installed IT capacity,Diesel stored and burned,+,,"backup gensets, monthly tests"
+Diesel stored and burned,Nitrogen oxides,+,,
+Diesel stored and burned,Fine particulate matter,+,,
+Diesel stored and burned,Carbon monoxide,+,,
+Diesel stored and burned,Sulfur dioxide,+,,
+Diesel stored and burned,Fuel and oil contamination,+,,
+Diesel stored and burned,Intermittent sound,+,,
+Diesel stored and burned,Fire risk,+,,
+Electricity consumed,Gas generation,+,,gas is the usual marginal / new-build resource
+Electricity consumed,Coal generation,+,,delayed coal retirements
+Gas generation,Natural gas demand,+,,
+Natural gas demand,Methane,+,,upstream leakage
+Natural gas demand,Wholesale energy price,+,,gas sets the marginal price
+Natural gas demand,Exposure to supply shocks,+,,
+Peak load,Wholesale energy price,+,,
+Renewable generation and storage,Wholesale energy price,-,,
+Renewable generation and storage,Gas generation,-,,
+"Clean firm generation (nuclear, geothermal)",Gas generation,-,,
+Clean energy procurement,Renewable generation and storage,+,,
+Clean energy procurement,"Clean firm generation (nuclear, geothermal)",+,,
+Clean energy procurement,Corporate climate targets,+,,market-based accounting
+Renewable generation and storage,Land held for power lines and plants,+,,
+Renewable generation and storage,Regional self-sufficiency in power,+,,
+Gas generation,Operational CO2,+,,
+Coal generation,Operational CO2,+,,
+Gas generation,Nitrogen oxides,+,,
+Coal generation,Sulfur dioxide,+,,
+Coal generation,Fine particulate matter,+,,
+Gas generation,Water embedded in electricity,+,,
+Coal generation,Water embedded in electricity,+,,
+"Clean firm generation (nuclear, geothermal)",Water embedded in electricity,+,,
+Gas generation,Water temperature,+,,thermal discharge
+Gas generation,Stranded-cost exposure,+,,long-lived plants for uncertain load
+Certainty of future load,Stranded-cost exposure,-,,
+Wholesale energy price,Household electricity bills,+,,
+Capacity price,Household electricity bills,+,,
+Share of grid costs carried by other customers,Household electricity bills,+,,
+Household electricity bills,Large-load tariffs,+,,regulators respond to ratepayer pressure
+Household electricity bills,Public opinion,-,,
+Household electricity bills,Stress and anxiety,+,,
+Household electricity bills,Match between who benefits and who bears costs,-,,
+Wholesale energy price,Siting attractiveness,-,,
+Operational CO2,Atmospheric greenhouse gas stock,+,,
+Embodied CO2,Atmospheric greenhouse gas stock,+,,
+Methane,Atmospheric greenhouse gas stock,+,,
+Atmospheric greenhouse gas stock,Climate change,+,yes,
+Climate change,PUE,+,,hotter ambient air means more cooling energy
+Climate change,Drought and water scarcity,+,,
+Climate change,Resilience to extreme heat,-,,
+Climate change,Peak-day water demand,+,,
+Operational CO2,State and national climate targets,-,,
+Operational CO2,Corporate climate targets,-,,
+Embodied CO2,Corporate climate targets,-,,Scope 3
+Corporate climate targets,Clean energy procurement,-,,falling progress triggers procurement
+Corporate climate targets,Fit between official metrics and lived experience,-,,paper progress vs local grid reality
+State and national climate targets,Clean energy standards,-,,falling progress prompts policy
+Clean energy standards,Renewable generation and storage,+,,
+Clean energy standards,"Clean firm generation (nuclear, geothermal)",+,,
+Clean energy standards,Coal generation,-,,
+Energy saved in other sectors,State and national climate targets,+,,
+Energy demand induced elsewhere,State and national climate targets,-,,
+Energy saved in other sectors,Natural gas demand,-,,
+Energy demand induced elsewhere,Natural gas demand,+,,
+AI adoption and usage,Energy saved in other sectors,+,,"optimisation of grids, buildings, logistics"
+AI adoption and usage,Energy demand induced elsewhere,+,,"more consumption, e-commerce, extraction"
+AI adoption and usage,Productivity,+,yes,
+Productivity,Regional output and income,+,,
+Installed IT capacity,Air temperature around sites,+,,waste heat
+Impervious surface,Air temperature around sites,+,,
+Heat reuse,Air temperature around sites,-,,
+Heat reuse,Energy saved in other sectors,+,,
+Liquid cooling share,Heat reuse,+,,higher-grade heat is easier to reuse
+Air temperature around sites,PUE,+,,
+Installed IT capacity,Water lost to evaporation,+,,
+Evaporative cooling share,Water lost to evaporation,+,,
+Evaporative cooling share,PUE,-,,water-for-energy trade-off
+Drought and water scarcity,Evaporative cooling share,-,,shift to dry / closed-loop cooling
+Water lost to evaporation,Municipal supply drawn,+,,
+Water lost to evaporation,Peak-day water demand,+,,
+Water lost to evaporation,Salinity and dissolved solids,+,,blowdown concentrates solids
+Evaporative cooling share,Treatment chemicals and biocides,+,,
+Treatment chemicals and biocides,Metals in discharge water,+,,zinc / copper corrosion inhibitors
+Treatment chemicals and biocides,Wastewater plant load,+,,
+Salinity and dissolved solids,Wastewater plant load,+,,
+Wastewater plant load,Public service and infrastructure spending,+,,
+Reclaimed water in use,Municipal supply drawn,-,,
+Water price,Reclaimed water in use,+,,
+Water price,Siting attractiveness,-,,
+Municipal supply drawn,Utility supply capacity,-,,remaining headroom
+Municipal supply drawn,Groundwater level,-,,
+Municipal supply drawn,River and stream flow,-,,
+Municipal supply drawn,Allocation among water users,-,,less for farms and households
+Municipal supply drawn,Public service and infrastructure spending,+,,
+Utility supply capacity,Water price,-,,
+Utility supply capacity,Room for other businesses to grow,+,,
+Peak-day water demand,Utility supply capacity,-,,
+Water embedded in electricity,River and stream flow,-,,
+Water embedded in hardware,Drought and water scarcity,+,,in water-stressed fab regions
+Drought and water scarcity,Chip and equipment supply,-,,
+Drought and water scarcity,Water price,+,,
+Groundwater level,Drought and water scarcity,-,,
+Groundwater recharge,Groundwater level,+,,
+Allocation among water users,Conflict and organised opposition,-,,
+Installed IT capacity,Water temperature,+,,warm discharge
+Water temperature,Birds and wildlife,-,,aquatic life
+Fuel and oil contamination,Exposure to hazardous materials,+,,
+Capacity under construction,Sediment and runoff,+,,
+Impervious surface,Sediment and runoff,+,,
+Sediment and runoff,Wetlands and streams,-,,
+Impervious surface,Groundwater recharge,-,,
+Capacity under construction,Farmland,-,,
+Capacity under construction,Forest and green space,-,,
+Capacity under construction,Wetlands and streams,-,,
+Capacity under construction,Impervious surface,+,,
+Capacity under construction,Reused industrial land,+,,brownfield sites
+Capacity under construction,Archaeological sites,-,,
+Capacity under construction,Cemeteries,-,,
+Capacity under construction,Historic landscapes and viewsheds,-,,
+Capacity under construction,Visual character,-,,
+Capacity under construction,Public access to open space,-,,
+Capacity under construction,Road traffic,+,,
+Capacity under construction,Duration of construction,+,,
+Capacity under construction,Intermittent sound,+,,
+Capacity under construction,Construction employment,+,,
+Capacity under construction,Land availability,-,,parcels used up
+Land held for power lines and plants,Farmland,-,,
+Land held for power lines and plants,Habitat extent and connectivity,-,,
+Land held for power lines and plants,Visual character,-,,
+Land held for power lines and plants,Security of land tenure,-,,eminent domain
+Land held for power lines and plants,Birds and wildlife,-,,collisions
+Forest and green space,Habitat extent and connectivity,+,,
+Wetlands and streams,Habitat extent and connectivity,+,,
+Farmland,Rural or residential character,+,,
+Farmland,Regional identity,+,,
+Habitat extent and connectivity,Birds and wildlife,+,,
+Night-time light,Birds and wildlife,-,,
+Continuous sound level,Birds and wildlife,-,,
+Security of land tenure,Fear for the community's future,-,,
+Visual character,Property values,+,,
+Visual character,Rural or residential character,+,,
+Public access to open space,Use of home and outdoor space,+,,
+Reused industrial land,Siting attractiveness,+,,
+Land availability,Siting attractiveness,+,,
+Zoning limits and moratoria,Land availability,-,,
+Installed IT capacity,Continuous sound level,+,,"chillers, fans, transformers"
+Installed IT capacity,Low-frequency sound,+,,
+Installed IT capacity,Night-time light,+,,
+Duration of construction,Daily routines,-,,
+Duration of construction,Stress and anxiety,+,,
+Road traffic,Emergency vehicle access,-,,
+Road traffic,Fine particulate matter,+,,
+Road traffic,Daily routines,-,,
+Continuous sound level,Sleep,-,,
+Low-frequency sound,Sleep,-,,
+Low-frequency sound,Stress and anxiety,+,,
+Intermittent sound,Sleep,-,,
+Night-time light,Sleep,-,,
+Night-time light,Rural or residential character,-,,
+Continuous sound level,Use of home and outdoor space,-,,
+Continuous sound level,Property values,-,,
+Sleep,Stress and anxiety,-,,
+Use of home and outdoor space,Stress and anxiety,-,,
+Daily routines,Stress and anxiety,-,,
+Stress and anxiety,Conflict and organised opposition,+,,
+Nitrogen oxides,Respiratory illness,+,,
+Fine particulate matter,Respiratory illness,+,,
+Sulfur dioxide,Respiratory illness,+,,
+Carbon monoxide,Respiratory illness,+,,
+Fine particulate matter,Premature death,+,,
+Resilience to extreme heat,Premature death,-,,heat-wave blackouts
+Respiratory illness,Cost of health damage,+,,
+Premature death,Cost of health damage,+,,
+Cost of health damage,Match between who benefits and who bears costs,-,,
+Installed IT capacity,Fire risk,+,,lithium-ion UPS / BESS
+Emergency vehicle access,Fire risk,-,,
+Fire risk,Exposure to hazardous materials,+,,
+Fire risk,Public service and infrastructure spending,+,,fire / hazmat capacity
+Hazardous waste,Exposure to hazardous materials,+,,
+Contamination at disposal sites,Exposure to hazardous materials,+,,
+Exposure to hazardous materials,Distribution of exposure across places and groups,+,,
+Bargaining power relative to developers,Distribution of exposure across places and groups,-,,burdens land on low-power places
+Attention to cumulative and regional effects,Distribution of exposure across places and groups,-,,
+Distribution of exposure across places and groups,Match between who benefits and who bears costs,-,,
+Installed IT capacity,Operations employment,+,,small per MW
+Construction employment,Availability of skilled trades,-,,"short-run drain on electricians, linemen"
+Construction employment,Hope for jobs and renewal,+,,
+Construction employment,Regional output and income,+,,
+Operations employment,Regional output and income,+,,
+Operations employment,Job quality and local share of jobs,+,,
+Availability of skilled trades,Installed IT capacity,+,,speeds commissioning
+Availability of skilled trades,Room for other businesses to grow,+,,
+Job quality and local share of jobs,Sense that promises are kept,+,,
+Job quality and local share of jobs,Hope for jobs and renewal,+,,
+Installed IT capacity,Local tax revenue,+,,property and equipment tax
+Data center tax incentives,State tax revenue forgone,+,,
+Data center tax incentives,Siting attractiveness,+,,
+Data center tax incentives,Value kept by host regions and countries,-,,
+State tax revenue forgone,Public service and infrastructure spending,-,,
+Local tax revenue,Fiscal dependence on one industry,+,,
+Local tax revenue,Public service and infrastructure spending,+,,
+Local tax revenue,Public opinion,+,,
+Local tax revenue,Value kept by host regions and countries,+,,
+Fiscal dependence on one industry,Data center tax incentives,+,,protect the tax base
+Fiscal dependence on one industry,Zoning limits and moratoria,-,,
+Fiscal dependence on one industry,Local control over land use,-,,
+Capital investment,Regional output and income,+,,
+Capital investment,Investment share of growth,+,,
+Investment share of growth,Investor expectations,+,,macro narrative
+Regional output and income,Property values,+,,
+Property values,Local tax revenue,+,,
+Installed IT capacity,Connectivity,+,,"fibre, IXPs"
+Connectivity,Siting attractiveness,+,,latency and ecosystem
+Bargaining power relative to developers,Value kept by host regions and countries,+,,
+Bargaining power relative to developers,Community benefit agreements,+,,
+Value kept by host regions and countries,Match between who benefits and who bears costs,+,,
+Community benefit agreements,Sense that promises are kept,+,,
+Community benefit agreements,Value kept by host regions and countries,+,,
+Developer secrecy,Public availability of project information,-,,
+Developer secrecy,Public availability of contract terms,-,,
+Developer secrecy,Trust in developers and officials,-,,
+Developer secrecy,Visibility of infrastructure and its labour,-,,
+Developer secrecy,Community say in decisions,-,,
+Disclosure rules,Public data on energy and water use,+,,
+Disclosure rules,Public availability of contract terms,+,,
+Disclosure rules,Developer secrecy,-,,
+Public availability of project information,Community say in decisions,+,,
+Public availability of project information,Quality of information in public debate,+,,
+Public availability of contract terms,Bargaining power relative to developers,+,,
+Public availability of contract terms,Trust in developers and officials,+,,
+Public data on energy and water use,Fit between official metrics and lived experience,+,,
+Public data on energy and water use,Visibility of infrastructure and its labour,+,,
+Public data on energy and water use,Certainty of future load,+,,
+Visibility of infrastructure and its labour,Quality of information in public debate,+,,
+Visibility of infrastructure and its labour,Physical attack on facilities,+,,transparency vs security tension
+Quality of information in public debate,Attention to cumulative and regional effects,+,,
+Fit between official metrics and lived experience,Trust in developers and officials,+,,
+Sense that promises are kept,Trust in developers and officials,+,,
+Community say in decisions,Trust in developers and officials,+,,
+Community say in decisions,Attention to cumulative and regional effects,+,,
+Clarity about who has authority,Community say in decisions,+,,
+Local control over land use,Zoning limits and moratoria,+,,
+Attention to cumulative and regional effects,Zoning limits and moratoria,+,,regional siting rules
+Trust in developers and officials,Conflict and organised opposition,-,,
+Match between who benefits and who bears costs,Conflict and organised opposition,-,,
+Hope for jobs and renewal,Public opinion,+,,
+Fear for the community's future,Public opinion,-,,
+Fear for the community's future,Conflict and organised opposition,+,,
+Rural or residential character,Fear for the community's future,-,,
+Regional identity,Fear for the community's future,-,,
+Relation to earlier industrial and extractive history,Fear for the community's future,+,,'we've seen this before'
+Relation to earlier industrial and extractive history,Hope for jobs and renewal,+,,post-industrial towns seek renewal
+Public opinion,Conflict and organised opposition,-,,
+Conflict and organised opposition,Zoning limits and moratoria,+,,
+Conflict and organised opposition,Permitting speed,-,,"hearings, lawsuits"
+Conflict and organised opposition,Disclosure rules,+,,
+Conflict and organised opposition,Developer secrecy,+,,developers hide plans to avoid opposition
+Conflict and organised opposition,Bargaining power relative to developers,+,,
+Conflict and organised opposition,Planned pipeline,-,,cancellations
+Zoning limits and moratoria,Permitting speed,-,,
+Installed IT capacity,Physical attack on facilities,+,,higher-value target
+Physical attack on facilities,Developer secrecy,+,,security justifies opacity
+Installed IT capacity,Cyberattack on energy systems,+,,larger attack surface
+Flexibility available to grid operators,Cyberattack on energy systems,+,,more digitally controlled load
+Cyberattack on energy systems,Frequency and voltage stability,-,,
+Peak load,Regional self-sufficiency in power,-,,
+Regional self-sufficiency in power,Exposure to supply shocks,-,,
+National compute capacity,Supplier concentration,+,,more demand on the same few suppliers
